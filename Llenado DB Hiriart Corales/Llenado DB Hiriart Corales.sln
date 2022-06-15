@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32602.291
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{159641D6-6404-4A2A-AE62-294DE0FE8301}") = "Llenado DB Hiriart Corales", "Llenado DB Hiriart Corales\Llenado DB Hiriart Corales.dtproj", "{11AE87B9-C96B-435B-A104-6EEF69417953}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Development|Default = Development|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{11AE87B9-C96B-435B-A104-6EEF69417953}.Development|Default.ActiveCfg = Development
+		{11AE87B9-C96B-435B-A104-6EEF69417953}.Development|Default.Build.0 = Development
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {44E4FF94-E58F-4F6C-A81B-0484D2EC6240}
+	EndGlobalSection
+EndGlobal
