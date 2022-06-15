@@ -26,7 +26,7 @@
           <SSIS:Property SSIS:Name="CreatorComputerName">DIEGOHL</SSIS:Property>
           <SSIS:Property SSIS:Name="Description">
           </SSIS:Property>
-          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAApoW3+CHLYEOajpBp2blQEAAAAAACAAAAAAAQZgAAAAEAACAAAAAvAkrIyiuXfOqOQYyjZ+isFN2asrUh1iq2wg/EettKCwAAAAAOgAAAAAIAACAAAAAtZN2Yom1T27Gp3MgXb9bmpVaNjHMP9vYiQkE13fPikJAAAAA4qjCsdEg7N0FQO9G1GcRbO9PPEkt+wrzbMtf+EJVn6WExr4oJq5NODvf9J8FnxG0uwpU5If3VLG+8J8eQxfuXXWBRNNOAwlYSuOmYG/5GUZWc6SkEQOmHQLEK48sxWbT5bBoVBnEIIMhLXgwPu384DrdljZK8KeQuy6kH72y/6mCfUHlGxTSspbyu7jdflPhAAAAA/9YqWvZXRV+AnfLfTt4bgp/iXV4GwX/z5jHkTNHV81YRool4nJRNpMWLXK74Mu+9k/wqh7XFVcolZXPqmgkCuQ==</SSIS:Property>
+          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAApoW3+CHLYEOajpBp2blQEAAAAAACAAAAAAAQZgAAAAEAACAAAADMhigKjtp4+qph5XJTUfMYUE94NLm7srvDp9MbLkJT2AAAAAAOgAAAAAIAACAAAACXNCnAUY9gWzo2x7NWYFFwcllvMNyFLlg8PJ819dTguZAAAABeI2IVzU3N181+5ooSfMb8i5fkqf/4fZfJTLIqdl79A9W/OazUi3W+GIM1fQ+f+BVWlZTmtv/VosRbAjX72ZnZmuVADPLt0y7nNc1DeMhSmpGX6UuMDpyZUbgdVgR+x3qpHJbcQn1WO6UBpNeiXY7ZZrCoptGG5PmtlybmZE2sEGlI8jXc/uZAd6ahUtIx9LRAAAAA2HwdY5xsEJKWLioMwGZWp1NjlSjBAuAqkA36DrlxHwxg3yyKJQLVeulMz8LSzJhSoyz6Niwsn8C/EiLaU+oUDw==</SSIS:Property>
           <SSIS:Property SSIS:Name="FormatVersion">1</SSIS:Property>
         </SSIS:Properties>
         <SSIS:Packages>
@@ -42,17 +42,17 @@
                 <SSIS:Property SSIS:Name="Name">Package</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">1</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">7</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{99F1FD5C-934F-4850-88DD-9D1177EB67A2}</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{0C6BC5AC-D481-4668-8BFA-1682C51724BC}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>
                 <SSIS:Property SSIS:Name="ProtectionLevel">1</SSIS:Property>
               </SSIS:Properties>
               <SSIS:Parameters>
-                <SSIS:Parameter SSIS:Name="CM.DIEGOHL\SQlDEV.EstadSeguridadHC.ConnectByProxy">
+                <SSIS:Parameter SSIS:Name="CM.DIEGOHL\SQLDEV.EstadSeguridadHC.ConnectByProxy">
                   <SSIS:Properties>
                     <SSIS:Property SSIS:Name="ID">
                     </SSIS:Property>
@@ -67,7 +67,7 @@
                     <SSIS:Property SSIS:Name="DataType">3</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
-                <SSIS:Parameter SSIS:Name="CM.DIEGOHL\SQlDEV.EstadSeguridadHC.ConnectionString">
+                <SSIS:Parameter SSIS:Name="CM.DIEGOHL\SQLDEV.EstadSeguridadHC.ConnectionString">
                   <SSIS:Properties>
                     <SSIS:Property SSIS:Name="ID">
                     </SSIS:Property>
@@ -78,11 +78,11 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">Data Source=DIEGOHL\SQlDEV;Initial Catalog=EstadSeguridadHC;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">Data Source=DIEGOHL\SQLDEV;Initial Catalog=EstadSeguridadHC;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;</SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
-                <SSIS:Parameter SSIS:Name="CM.DIEGOHL\SQlDEV.EstadSeguridadHC.ConnectRetryCount">
+                <SSIS:Parameter SSIS:Name="CM.DIEGOHL\SQLDEV.EstadSeguridadHC.ConnectRetryCount">
                   <SSIS:Properties>
                     <SSIS:Property SSIS:Name="ID">
                     </SSIS:Property>
@@ -97,7 +97,7 @@
                     <SSIS:Property SSIS:Name="DataType">9</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
-                <SSIS:Parameter SSIS:Name="CM.DIEGOHL\SQlDEV.EstadSeguridadHC.ConnectRetryInterval">
+                <SSIS:Parameter SSIS:Name="CM.DIEGOHL\SQLDEV.EstadSeguridadHC.ConnectRetryInterval">
                   <SSIS:Properties>
                     <SSIS:Property SSIS:Name="ID">
                     </SSIS:Property>
@@ -112,7 +112,7 @@
                     <SSIS:Property SSIS:Name="DataType">9</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
-                <SSIS:Parameter SSIS:Name="CM.DIEGOHL\SQlDEV.EstadSeguridadHC.ConnectUsingManagedIdentity">
+                <SSIS:Parameter SSIS:Name="CM.DIEGOHL\SQLDEV.EstadSeguridadHC.ConnectUsingManagedIdentity">
                   <SSIS:Properties>
                     <SSIS:Property SSIS:Name="ID">
                     </SSIS:Property>
@@ -127,7 +127,7 @@
                     <SSIS:Property SSIS:Name="DataType">3</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
-                <SSIS:Parameter SSIS:Name="CM.DIEGOHL\SQlDEV.EstadSeguridadHC.InitialCatalog">
+                <SSIS:Parameter SSIS:Name="CM.DIEGOHL\SQLDEV.EstadSeguridadHC.InitialCatalog">
                   <SSIS:Properties>
                     <SSIS:Property SSIS:Name="ID">
                     </SSIS:Property>
@@ -142,7 +142,7 @@
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
-                <SSIS:Parameter SSIS:Name="CM.DIEGOHL\SQlDEV.EstadSeguridadHC.Password">
+                <SSIS:Parameter SSIS:Name="CM.DIEGOHL\SQLDEV.EstadSeguridadHC.Password">
                   <SSIS:Properties>
                     <SSIS:Property SSIS:Name="ID">
                     </SSIS:Property>
@@ -156,7 +156,7 @@
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
-                <SSIS:Parameter SSIS:Name="CM.DIEGOHL\SQlDEV.EstadSeguridadHC.RetainSameConnection">
+                <SSIS:Parameter SSIS:Name="CM.DIEGOHL\SQLDEV.EstadSeguridadHC.RetainSameConnection">
                   <SSIS:Properties>
                     <SSIS:Property SSIS:Name="ID">
                     </SSIS:Property>
@@ -171,7 +171,7 @@
                     <SSIS:Property SSIS:Name="DataType">3</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
-                <SSIS:Parameter SSIS:Name="CM.DIEGOHL\SQlDEV.EstadSeguridadHC.ServerName">
+                <SSIS:Parameter SSIS:Name="CM.DIEGOHL\SQLDEV.EstadSeguridadHC.ServerName">
                   <SSIS:Properties>
                     <SSIS:Property SSIS:Name="ID">
                     </SSIS:Property>
@@ -182,11 +182,11 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">DIEGOHL\SQlDEV</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">DIEGOHL\SQLDEV</SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
-                <SSIS:Parameter SSIS:Name="CM.DIEGOHL\SQlDEV.EstadSeguridadHC.UserName">
+                <SSIS:Parameter SSIS:Name="CM.DIEGOHL\SQLDEV.EstadSeguridadHC.UserName">
                   <SSIS:Properties>
                     <SSIS:Property SSIS:Name="ID">
                     </SSIS:Property>
@@ -226,7 +226,7 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Code-UDLA\BDIII\Proyecto BI Hiriart Corales\Homicidios intencionales 25-05-2022 Excel 97 03.xls;Extended Properties="Excel 8.0;HDR=YES";</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Code-UDLA\BDIII\Proyecto-BI-Hiriart-Corales\Homicidios intencionales 25-05-2022 Excel 97 03.xls;Extended Properties="Excel 8.0;HDR=YES";</SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
@@ -241,7 +241,7 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">C:\Code-UDLA\BDIII\Proyecto BI Hiriart Corales\Homicidios intencionales 25-05-2022 Excel 97 03.xls</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">C:\Code-UDLA\BDIII\Proyecto-BI-Hiriart-Corales\Homicidios intencionales 25-05-2022 Excel 97 03.xls</SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
@@ -314,7 +314,7 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">C:\Code-UDLA\BDIII\Proyecto BI Hiriart Corales\Homicidios intencionales 25-05-2022 Excel 97 03.xls</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">C:\Code-UDLA\BDIII\Proyecto-BI-Hiriart-Corales\Homicidios intencionales 25-05-2022 Excel 97 03.xls</SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
@@ -357,7 +357,13 @@
         <LinkedAzureSSISIR />
         <LinkedAzureStorage />
         <RemoteExecutionFolder />
-        <ParameterConfigurationValues />
+        <ParameterConfigurationValues>
+          <ConfigurationSetting>
+            <Id>LastModifiedTime</Id>
+            <Name>LastModifiedTime</Name>
+            <Value xsi:type="xsd:dateTime">2022-06-15T01:58:39.3072346Z</Value>
+          </ConfigurationSetting>
+        </ParameterConfigurationValues>
       </Options>
     </Configuration>
   </Configurations>

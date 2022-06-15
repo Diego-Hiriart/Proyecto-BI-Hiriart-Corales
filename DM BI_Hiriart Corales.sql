@@ -8,14 +8,14 @@ GO
 CREATE TABLE Clasificacion_dim(
 Clasificacion_key INT PRIMARY KEY IDENTITY(1, 1) NOT NULL,
 ClasificacionID INT NOT NULL,
-Nombre NVARCHAR(40) NOT NULL
+Nombre NVARCHAR(100) NOT NULL
 );
 
 CREATE TABLE Localidad_dim(
 Localidad_key INT PRIMARY KEY IDENTITY(1, 1) NOT NULL,
 LocalidadID INT NOT NULL,
-Canton NVARCHAR(30) NOT NULL,
-Provincia NVARCHAR(30) NOT NULL,
+Canton NVARCHAR(100) NOT NULL,
+Provincia NVARCHAR(100) NOT NULL,
 Poblacion INT NOT NULL
 );
 
@@ -40,9 +40,9 @@ Afectados INT NOT NULL,
 Periodo DATETIME NOT NULL,
 RegionID INT NOT NULL,
 ClasificacionID INT NOT NULL,
-EdadVictima NVARCHAR(10) NOT NULL,
-GeneroPerpetuador NVARCHAR(15) NULL,
-TipoArma NVARCHAR(20) NOT NULL,
+EdadVictima NVARCHAR(100) NOT NULL,
+GeneroPerpetuador NVARCHAR(100) NULL,
+TipoArma NVARCHAR(100) NOT NULL,
 Clasificacion_key INT NOT NULL,
 Localidad_key INT NOT NULL,
 Detalles_key INT NOT NULL,

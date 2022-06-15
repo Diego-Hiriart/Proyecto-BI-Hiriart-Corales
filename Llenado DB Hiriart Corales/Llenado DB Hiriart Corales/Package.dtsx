@@ -11,46 +11,47 @@
   DTS:LocaleID="12298"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="1"
-  DTS:VersionGUID="{99F1FD5C-934F-4850-88DD-9D1177EB67A2}">
+  DTS:VersionBuild="15"
+  DTS:VersionGUID="{25A65A0F-9728-4D82-98E6-D93C95AB8D48}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
     <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[DIEGOHL\SQlDEV.EstadSeguridadHC]"
+      DTS:refId="Package.ConnectionManagers[DIEGOHL\SQLDEV.EstadSeguridadHC]"
       DTS:CreationName="OLEDB"
-      DTS:DTSID="{7B1346EA-0926-41B7-9ED8-C8F4BDB6049D}"
-      DTS:ObjectName="DIEGOHL\SQlDEV.EstadSeguridadHC">
+      DTS:DTSID="{77A4E72C-753C-468A-968A-441CF322FC53}"
+      DTS:ObjectName="DIEGOHL\SQLDEV.EstadSeguridadHC">
       <DTS:ObjectData>
         <DTS:ConnectionManager
           DTS:ConnectRetryCount="1"
           DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=DIEGOHL\SQlDEV;Initial Catalog=EstadSeguridadHC;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+          DTS:ConnectionString="Data Source=DIEGOHL\SQLDEV;Initial Catalog=EstadSeguridadHC;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[Excel Connection Manager]"
       DTS:CreationName="EXCEL"
-      DTS:DTSID="{96E2DB03-7066-465B-96F2-04E28E2D77B3}"
+      DTS:DTSID="{F249B2E5-830F-46D5-81C4-3B74E2B25F3B}"
       DTS:ObjectName="Excel Connection Manager">
       <DTS:ObjectData>
         <DTS:ConnectionManager
           DTS:ConnectRetryCount="0"
           DTS:ConnectRetryInterval="0"
-          DTS:ConnectionString="Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Code-UDLA\BDIII\Proyecto BI Hiriart Corales\Homicidios intencionales 25-05-2022 Excel 97 03.xls;Extended Properties=&quot;Excel 8.0;HDR=YES&quot;;" />
+          DTS:ConnectionString="Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Code-UDLA\BDIII\Proyecto-BI-Hiriart-Corales\Homicidios intencionales 25-05-2022 Excel 97 03.xls;Extended Properties=&quot;EXCEL 8.0;HDR=YES&quot;;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
   </DTS:ConnectionManagers>
   <DTS:Variables />
   <DTS:Executables>
     <DTS:Executable
-      DTS:refId="Package\Data Flow Task Clasificaciones"
+      DTS:refId="Package\Data Flow Task Clasificacion"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Data Flow Task"
-      DTS:DTSID="{D0155A31-F700-46C0-95F2-DFFC9148DFE7}"
+      DTS:Disabled="True"
+      DTS:DTSID="{38414266-BFFE-4DFC-89EB-C82A41F5F066}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
-      DTS:ObjectName="Data Flow Task Clasificaciones"
+      DTS:ObjectName="Data Flow Task Clasificacion"
       DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
       <DTS:Variables />
       <DTS:ObjectData>
@@ -58,7 +59,7 @@
           version="1">
           <components>
             <component
-              refId="Package\Data Flow Task Clasificaciones\Excel Source"
+              refId="Package\Data Flow Task Clasificacion\Excel Source"
               componentClassID="Microsoft.ExcelSource"
               contactInfo="Excel Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
               description="Excel Source"
@@ -99,7 +100,7 @@
               </properties>
               <connections>
                 <connection
-                  refId="Package\Data Flow Task Clasificaciones\Excel Source.Connections[OleDbConnection]"
+                  refId="Package\Data Flow Task Clasificacion\Excel Source.Connections[OleDbConnection]"
                   connectionManagerID="Package.ConnectionManagers[Excel Connection Manager]"
                   connectionManagerRefId="Package.ConnectionManagers[Excel Connection Manager]"
                   description="The OLE DB runtime connection used to access the database."
@@ -107,50 +108,68 @@
               </connections>
               <outputs>
                 <output
-                  refId="Package\Data Flow Task Clasificaciones\Excel Source.Outputs[Excel Source Output]"
+                  refId="Package\Data Flow Task Clasificacion\Excel Source.Outputs[Excel Source Output]"
                   name="Excel Source Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Data Flow Task Clasificaciones\Excel Source.Outputs[Excel Source Output].Columns[Nombre]"
+                      refId="Package\Data Flow Task Clasificacion\Excel Source.Outputs[Excel Source Output].Columns[Nombre]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task Clasificaciones\Excel Source.Outputs[Excel Source Output].ExternalColumns[Nombre]"
+                      externalMetadataColumnId="Package\Data Flow Task Clasificacion\Excel Source.Outputs[Excel Source Output].ExternalColumns[Nombre]"
                       length="255"
-                      lineageId="Package\Data Flow Task Clasificaciones\Excel Source.Outputs[Excel Source Output].Columns[Nombre]"
+                      lineageId="Package\Data Flow Task Clasificacion\Excel Source.Outputs[Excel Source Output].Columns[Nombre]"
                       name="Nombre"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task Clasificacion\Excel Source.Outputs[Excel Source Output].Columns[ID]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task Clasificacion\Excel Source.Outputs[Excel Source Output].ExternalColumns[ID]"
+                      lineageId="Package\Data Flow Task Clasificacion\Excel Source.Outputs[Excel Source Output].Columns[ID]"
+                      name="ID"
                       truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task Clasificaciones\Excel Source.Outputs[Excel Source Output].ExternalColumns[Nombre]"
+                      refId="Package\Data Flow Task Clasificacion\Excel Source.Outputs[Excel Source Output].ExternalColumns[Nombre]"
                       dataType="wstr"
                       length="255"
                       name="Nombre" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task Clasificacion\Excel Source.Outputs[Excel Source Output].ExternalColumns[ID]"
+                      dataType="r8"
+                      name="ID" />
                   </externalMetadataColumns>
                 </output>
                 <output
-                  refId="Package\Data Flow Task Clasificaciones\Excel Source.Outputs[Excel Source Error Output]"
+                  refId="Package\Data Flow Task Clasificacion\Excel Source.Outputs[Excel Source Error Output]"
                   isErrorOut="true"
                   name="Excel Source Error Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Data Flow Task Clasificaciones\Excel Source.Outputs[Excel Source Error Output].Columns[Nombre]"
+                      refId="Package\Data Flow Task Clasificacion\Excel Source.Outputs[Excel Source Error Output].Columns[Nombre]"
                       dataType="wstr"
                       length="255"
-                      lineageId="Package\Data Flow Task Clasificaciones\Excel Source.Outputs[Excel Source Error Output].Columns[Nombre]"
+                      lineageId="Package\Data Flow Task Clasificacion\Excel Source.Outputs[Excel Source Error Output].Columns[Nombre]"
                       name="Nombre" />
                     <outputColumn
-                      refId="Package\Data Flow Task Clasificaciones\Excel Source.Outputs[Excel Source Error Output].Columns[ErrorCode]"
+                      refId="Package\Data Flow Task Clasificacion\Excel Source.Outputs[Excel Source Error Output].Columns[ID]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Task Clasificacion\Excel Source.Outputs[Excel Source Error Output].Columns[ID]"
+                      name="ID" />
+                    <outputColumn
+                      refId="Package\Data Flow Task Clasificacion\Excel Source.Outputs[Excel Source Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task Clasificaciones\Excel Source.Outputs[Excel Source Error Output].Columns[ErrorCode]"
+                      lineageId="Package\Data Flow Task Clasificacion\Excel Source.Outputs[Excel Source Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Data Flow Task Clasificaciones\Excel Source.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                      refId="Package\Data Flow Task Clasificacion\Excel Source.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task Clasificaciones\Excel Source.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\Data Flow Task Clasificacion\Excel Source.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -159,7 +178,7 @@
               </outputs>
             </component>
             <component
-              refId="Package\Data Flow Task Clasificaciones\OLE DB Destination"
+              refId="Package\Data Flow Task Clasificacion\OLE DB Destination"
               componentClassID="Microsoft.OLEDBDestination"
               contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
               description="OLE DB Destination"
@@ -216,36 +235,36 @@
               </properties>
               <connections>
                 <connection
-                  refId="Package\Data Flow Task Clasificaciones\OLE DB Destination.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[DIEGOHL\SQlDEV.EstadSeguridadHC]"
-                  connectionManagerRefId="Package.ConnectionManagers[DIEGOHL\SQlDEV.EstadSeguridadHC]"
+                  refId="Package\Data Flow Task Clasificacion\OLE DB Destination.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DIEGOHL\SQLDEV.EstadSeguridadHC]"
+                  connectionManagerRefId="Package.ConnectionManagers[DIEGOHL\SQLDEV.EstadSeguridadHC]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
               <inputs>
                 <input
-                  refId="Package\Data Flow Task Clasificaciones\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  refId="Package\Data Flow Task Clasificacion\OLE DB Destination.Inputs[OLE DB Destination Input]"
                   errorOrTruncationOperation="Insert"
                   errorRowDisposition="FailComponent"
                   hasSideEffects="true"
                   name="OLE DB Destination Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Data Flow Task Clasificaciones\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Nombre]"
+                      refId="Package\Data Flow Task Clasificacion\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Nombre]"
                       cachedDataType="wstr"
                       cachedLength="255"
                       cachedName="Nombre"
-                      externalMetadataColumnId="Package\Data Flow Task Clasificaciones\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Nombre]"
-                      lineageId="Package\Data Flow Task Clasificaciones\Excel Source.Outputs[Excel Source Output].Columns[Nombre]" />
+                      externalMetadataColumnId="Package\Data Flow Task Clasificacion\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Nombre]"
+                      lineageId="Package\Data Flow Task Clasificacion\Excel Source.Outputs[Excel Source Output].Columns[Nombre]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task Clasificaciones\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ClasificacionID]"
+                      refId="Package\Data Flow Task Clasificacion\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ClasificacionID]"
                       dataType="i4"
                       name="ClasificacionID" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task Clasificaciones\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Nombre]"
+                      refId="Package\Data Flow Task Clasificacion\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Nombre]"
                       dataType="wstr"
                       length="100"
                       name="Nombre" />
@@ -254,22 +273,22 @@
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Data Flow Task Clasificaciones\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
+                  refId="Package\Data Flow Task Clasificacion\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
                   exclusionGroup="1"
                   isErrorOut="true"
                   name="OLE DB Destination Error Output"
-                  synchronousInputId="Package\Data Flow Task Clasificaciones\OLE DB Destination.Inputs[OLE DB Destination Input]">
+                  synchronousInputId="Package\Data Flow Task Clasificacion\OLE DB Destination.Inputs[OLE DB Destination Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Data Flow Task Clasificaciones\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      refId="Package\Data Flow Task Clasificacion\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task Clasificaciones\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      lineageId="Package\Data Flow Task Clasificacion\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Data Flow Task Clasificaciones\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      refId="Package\Data Flow Task Clasificacion\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task Clasificaciones\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\Data Flow Task Clasificacion\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -280,22 +299,23 @@
           </components>
           <paths>
             <path
-              refId="Package\Data Flow Task Clasificaciones.Paths[Excel Source Output]"
-              endId="Package\Data Flow Task Clasificaciones\OLE DB Destination.Inputs[OLE DB Destination Input]"
+              refId="Package\Data Flow Task Clasificacion.Paths[Excel Source Output]"
+              endId="Package\Data Flow Task Clasificacion\OLE DB Destination.Inputs[OLE DB Destination Input]"
               name="Excel Source Output"
-              startId="Package\Data Flow Task Clasificaciones\Excel Source.Outputs[Excel Source Output]" />
+              startId="Package\Data Flow Task Clasificacion\Excel Source.Outputs[Excel Source Output]" />
           </paths>
         </pipeline>
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
-      DTS:refId="Package\Data Flow Task Localidades"
+      DTS:refId="Package\Data Flow Task Crimen"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Data Flow Task"
-      DTS:DTSID="{585695AC-E8BB-4E46-80EA-C3AE75610BE6}"
+      DTS:Disabled="True"
+      DTS:DTSID="{E48292AD-8643-4BC0-AB71-E9A1BF84D7D1}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
-      DTS:ObjectName="Data Flow Task Localidades"
+      DTS:ObjectName="Data Flow Task Crimen"
       DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
       <DTS:Variables />
       <DTS:ObjectData>
@@ -303,7 +323,1031 @@
           version="1">
           <components>
             <component
-              refId="Package\Data Flow Task Localidades\Excel Source"
+              refId="Package\Data Flow Task Crimen\Excel Source"
+              componentClassID="Microsoft.ExcelSource"
+              contactInfo="Excel Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Excel Source"
+              name="Excel Source"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">'HOMICIDIOS INTENCIONALES$'</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="The mapping from parameters in the SQL command to variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task Crimen\Excel Source.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Excel Connection Manager]"
+                  connectionManagerRefId="Package.ConnectionManagers[Excel Connection Manager]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task Crimen\Excel Source.Outputs[Excel Source Output]"
+                  name="Excel Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task Crimen\Excel Source.Outputs[Excel Source Output].Columns[ID]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task Crimen\Excel Source.Outputs[Excel Source Output].ExternalColumns[ID]"
+                      lineageId="Package\Data Flow Task Crimen\Excel Source.Outputs[Excel Source Output].Columns[ID]"
+                      name="ID"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task Crimen\Excel Source.Outputs[Excel Source Output].Columns[TIPO DE MUERTE]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task Crimen\Excel Source.Outputs[Excel Source Output].ExternalColumns[TIPO DE MUERTE]"
+                      length="255"
+                      lineageId="Package\Data Flow Task Crimen\Excel Source.Outputs[Excel Source Output].Columns[TIPO DE MUERTE]"
+                      name="TIPO DE MUERTE"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task Crimen\Excel Source.Outputs[Excel Source Output].Columns[PROVINCIA]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task Crimen\Excel Source.Outputs[Excel Source Output].ExternalColumns[PROVINCIA]"
+                      length="255"
+                      lineageId="Package\Data Flow Task Crimen\Excel Source.Outputs[Excel Source Output].Columns[PROVINCIA]"
+                      name="PROVINCIA"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task Crimen\Excel Source.Outputs[Excel Source Output].Columns[CANTÓN]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task Crimen\Excel Source.Outputs[Excel Source Output].ExternalColumns[CANTÓN]"
+                      length="255"
+                      lineageId="Package\Data Flow Task Crimen\Excel Source.Outputs[Excel Source Output].Columns[CANTÓN]"
+                      name="CANTÓN"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task Crimen\Excel Source.Outputs[Excel Source Output].Columns[MES]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task Crimen\Excel Source.Outputs[Excel Source Output].ExternalColumns[MES]"
+                      length="255"
+                      lineageId="Package\Data Flow Task Crimen\Excel Source.Outputs[Excel Source Output].Columns[MES]"
+                      name="MES"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task Crimen\Excel Source.Outputs[Excel Source Output].Columns[AÑO]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task Crimen\Excel Source.Outputs[Excel Source Output].ExternalColumns[AÑO]"
+                      lineageId="Package\Data Flow Task Crimen\Excel Source.Outputs[Excel Source Output].Columns[AÑO]"
+                      name="AÑO"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task Crimen\Excel Source.Outputs[Excel Source Output].Columns[TIPO DE ARMA]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task Crimen\Excel Source.Outputs[Excel Source Output].ExternalColumns[TIPO DE ARMA]"
+                      length="255"
+                      lineageId="Package\Data Flow Task Crimen\Excel Source.Outputs[Excel Source Output].Columns[TIPO DE ARMA]"
+                      name="TIPO DE ARMA"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task Crimen\Excel Source.Outputs[Excel Source Output].Columns[RANGO DE EDAD]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task Crimen\Excel Source.Outputs[Excel Source Output].ExternalColumns[RANGO DE EDAD]"
+                      length="255"
+                      lineageId="Package\Data Flow Task Crimen\Excel Source.Outputs[Excel Source Output].Columns[RANGO DE EDAD]"
+                      name="RANGO DE EDAD"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task Crimen\Excel Source.Outputs[Excel Source Output].Columns[SEXO]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task Crimen\Excel Source.Outputs[Excel Source Output].ExternalColumns[SEXO]"
+                      length="255"
+                      lineageId="Package\Data Flow Task Crimen\Excel Source.Outputs[Excel Source Output].Columns[SEXO]"
+                      name="SEXO"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task Crimen\Excel Source.Outputs[Excel Source Output].Columns[# HOMICIDIOS]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task Crimen\Excel Source.Outputs[Excel Source Output].ExternalColumns[# HOMICIDIOS]"
+                      lineageId="Package\Data Flow Task Crimen\Excel Source.Outputs[Excel Source Output].Columns[# HOMICIDIOS]"
+                      name="# HOMICIDIOS"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task Crimen\Excel Source.Outputs[Excel Source Output].Columns[ID localidad]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task Crimen\Excel Source.Outputs[Excel Source Output].ExternalColumns[ID localidad]"
+                      lineageId="Package\Data Flow Task Crimen\Excel Source.Outputs[Excel Source Output].Columns[ID localidad]"
+                      name="ID localidad"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task Crimen\Excel Source.Outputs[Excel Source Output].Columns[ID clasificacion]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task Crimen\Excel Source.Outputs[Excel Source Output].ExternalColumns[ID clasificacion]"
+                      lineageId="Package\Data Flow Task Crimen\Excel Source.Outputs[Excel Source Output].Columns[ID clasificacion]"
+                      name="ID clasificacion"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task Crimen\Excel Source.Outputs[Excel Source Output].Columns[Periodo]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task Crimen\Excel Source.Outputs[Excel Source Output].ExternalColumns[Periodo]"
+                      length="255"
+                      lineageId="Package\Data Flow Task Crimen\Excel Source.Outputs[Excel Source Output].Columns[Periodo]"
+                      name="Periodo"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task Crimen\Excel Source.Outputs[Excel Source Output].ExternalColumns[ID]"
+                      dataType="r8"
+                      name="ID" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task Crimen\Excel Source.Outputs[Excel Source Output].ExternalColumns[TIPO DE MUERTE]"
+                      dataType="wstr"
+                      length="255"
+                      name="TIPO DE MUERTE" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task Crimen\Excel Source.Outputs[Excel Source Output].ExternalColumns[PROVINCIA]"
+                      dataType="wstr"
+                      length="255"
+                      name="PROVINCIA" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task Crimen\Excel Source.Outputs[Excel Source Output].ExternalColumns[CANTÓN]"
+                      dataType="wstr"
+                      length="255"
+                      name="CANTÓN" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task Crimen\Excel Source.Outputs[Excel Source Output].ExternalColumns[MES]"
+                      dataType="wstr"
+                      length="255"
+                      name="MES" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task Crimen\Excel Source.Outputs[Excel Source Output].ExternalColumns[AÑO]"
+                      dataType="r8"
+                      name="AÑO" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task Crimen\Excel Source.Outputs[Excel Source Output].ExternalColumns[TIPO DE ARMA]"
+                      dataType="wstr"
+                      length="255"
+                      name="TIPO DE ARMA" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task Crimen\Excel Source.Outputs[Excel Source Output].ExternalColumns[RANGO DE EDAD]"
+                      dataType="wstr"
+                      length="255"
+                      name="RANGO DE EDAD" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task Crimen\Excel Source.Outputs[Excel Source Output].ExternalColumns[SEXO]"
+                      dataType="wstr"
+                      length="255"
+                      name="SEXO" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task Crimen\Excel Source.Outputs[Excel Source Output].ExternalColumns[# HOMICIDIOS]"
+                      dataType="r8"
+                      name="# HOMICIDIOS" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task Crimen\Excel Source.Outputs[Excel Source Output].ExternalColumns[ID localidad]"
+                      dataType="r8"
+                      name="ID localidad" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task Crimen\Excel Source.Outputs[Excel Source Output].ExternalColumns[ID clasificacion]"
+                      dataType="r8"
+                      name="ID clasificacion" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task Crimen\Excel Source.Outputs[Excel Source Output].ExternalColumns[Periodo]"
+                      dataType="wstr"
+                      length="255"
+                      name="Periodo" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Data Flow Task Crimen\Excel Source.Outputs[Excel Source Error Output]"
+                  isErrorOut="true"
+                  name="Excel Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task Crimen\Excel Source.Outputs[Excel Source Error Output].Columns[ID]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Task Crimen\Excel Source.Outputs[Excel Source Error Output].Columns[ID]"
+                      name="ID" />
+                    <outputColumn
+                      refId="Package\Data Flow Task Crimen\Excel Source.Outputs[Excel Source Error Output].Columns[TIPO DE MUERTE]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Data Flow Task Crimen\Excel Source.Outputs[Excel Source Error Output].Columns[TIPO DE MUERTE]"
+                      name="TIPO DE MUERTE" />
+                    <outputColumn
+                      refId="Package\Data Flow Task Crimen\Excel Source.Outputs[Excel Source Error Output].Columns[PROVINCIA]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Data Flow Task Crimen\Excel Source.Outputs[Excel Source Error Output].Columns[PROVINCIA]"
+                      name="PROVINCIA" />
+                    <outputColumn
+                      refId="Package\Data Flow Task Crimen\Excel Source.Outputs[Excel Source Error Output].Columns[CANTÓN]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Data Flow Task Crimen\Excel Source.Outputs[Excel Source Error Output].Columns[CANTÓN]"
+                      name="CANTÓN" />
+                    <outputColumn
+                      refId="Package\Data Flow Task Crimen\Excel Source.Outputs[Excel Source Error Output].Columns[MES]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Data Flow Task Crimen\Excel Source.Outputs[Excel Source Error Output].Columns[MES]"
+                      name="MES" />
+                    <outputColumn
+                      refId="Package\Data Flow Task Crimen\Excel Source.Outputs[Excel Source Error Output].Columns[AÑO]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Task Crimen\Excel Source.Outputs[Excel Source Error Output].Columns[AÑO]"
+                      name="AÑO" />
+                    <outputColumn
+                      refId="Package\Data Flow Task Crimen\Excel Source.Outputs[Excel Source Error Output].Columns[TIPO DE ARMA]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Data Flow Task Crimen\Excel Source.Outputs[Excel Source Error Output].Columns[TIPO DE ARMA]"
+                      name="TIPO DE ARMA" />
+                    <outputColumn
+                      refId="Package\Data Flow Task Crimen\Excel Source.Outputs[Excel Source Error Output].Columns[RANGO DE EDAD]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Data Flow Task Crimen\Excel Source.Outputs[Excel Source Error Output].Columns[RANGO DE EDAD]"
+                      name="RANGO DE EDAD" />
+                    <outputColumn
+                      refId="Package\Data Flow Task Crimen\Excel Source.Outputs[Excel Source Error Output].Columns[SEXO]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Data Flow Task Crimen\Excel Source.Outputs[Excel Source Error Output].Columns[SEXO]"
+                      name="SEXO" />
+                    <outputColumn
+                      refId="Package\Data Flow Task Crimen\Excel Source.Outputs[Excel Source Error Output].Columns[# HOMICIDIOS]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Task Crimen\Excel Source.Outputs[Excel Source Error Output].Columns[# HOMICIDIOS]"
+                      name="# HOMICIDIOS" />
+                    <outputColumn
+                      refId="Package\Data Flow Task Crimen\Excel Source.Outputs[Excel Source Error Output].Columns[ID localidad]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Task Crimen\Excel Source.Outputs[Excel Source Error Output].Columns[ID localidad]"
+                      name="ID localidad" />
+                    <outputColumn
+                      refId="Package\Data Flow Task Crimen\Excel Source.Outputs[Excel Source Error Output].Columns[ID clasificacion]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Task Crimen\Excel Source.Outputs[Excel Source Error Output].Columns[ID clasificacion]"
+                      name="ID clasificacion" />
+                    <outputColumn
+                      refId="Package\Data Flow Task Crimen\Excel Source.Outputs[Excel Source Error Output].Columns[Periodo]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Data Flow Task Crimen\Excel Source.Outputs[Excel Source Error Output].Columns[Periodo]"
+                      name="Periodo" />
+                    <outputColumn
+                      refId="Package\Data Flow Task Crimen\Excel Source.Outputs[Excel Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task Crimen\Excel Source.Outputs[Excel Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task Crimen\Excel Source.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task Crimen\Excel Source.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task Crimen\OLE DB Destination"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="OLE DB Destination"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[Crimen]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task Crimen\OLE DB Destination.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DIEGOHL\SQLDEV.EstadSeguridadHC]"
+                  connectionManagerRefId="Package.ConnectionManagers[DIEGOHL\SQLDEV.EstadSeguridadHC]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task Crimen\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task Crimen\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Periodo]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Periodo"
+                      externalMetadataColumnId="Package\Data Flow Task Crimen\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Periodo]"
+                      lineageId="Package\Data Flow Task Crimen\Excel Source.Outputs[Excel Source Output].Columns[Periodo]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task Crimen\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[# HOMICIDIOS]"
+                      cachedDataType="r8"
+                      cachedName="# HOMICIDIOS"
+                      externalMetadataColumnId="Package\Data Flow Task Crimen\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Afectados]"
+                      lineageId="Package\Data Flow Task Crimen\Excel Source.Outputs[Excel Source Output].Columns[# HOMICIDIOS]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task Crimen\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[ID localidad]"
+                      cachedDataType="r8"
+                      cachedName="ID localidad"
+                      externalMetadataColumnId="Package\Data Flow Task Crimen\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[LocalidadID]"
+                      lineageId="Package\Data Flow Task Crimen\Excel Source.Outputs[Excel Source Output].Columns[ID localidad]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task Crimen\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[ID clasificacion]"
+                      cachedDataType="r8"
+                      cachedName="ID clasificacion"
+                      externalMetadataColumnId="Package\Data Flow Task Crimen\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ClasificacionID]"
+                      lineageId="Package\Data Flow Task Crimen\Excel Source.Outputs[Excel Source Output].Columns[ID clasificacion]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task Crimen\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CrimenID]"
+                      dataType="i4"
+                      name="CrimenID" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task Crimen\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Afectados]"
+                      dataType="i4"
+                      name="Afectados" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task Crimen\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Periodo]"
+                      dataType="dbTimeStamp"
+                      name="Periodo" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task Crimen\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[LocalidadID]"
+                      dataType="i4"
+                      name="LocalidadID" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task Crimen\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ClasificacionID]"
+                      dataType="i4"
+                      name="ClasificacionID" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task Crimen\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Data Flow Task Crimen\OLE DB Destination.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task Crimen\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task Crimen\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task Crimen\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task Crimen\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Data Flow Task Crimen.Paths[Excel Source Output]"
+              endId="Package\Data Flow Task Crimen\OLE DB Destination.Inputs[OLE DB Destination Input]"
+              name="Excel Source Output"
+              startId="Package\Data Flow Task Crimen\Excel Source.Outputs[Excel Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Data Flow Task Detalle"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{3BB31E44-3E4D-485A-9534-BB372461A72F}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Data Flow Task Detalle"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Data Flow Task Detalle\Excel Source"
+              componentClassID="Microsoft.ExcelSource"
+              contactInfo="Excel Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Excel Source"
+              name="Excel Source"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">'HOMICIDIOS INTENCIONALES$'</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="The mapping from parameters in the SQL command to variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task Detalle\Excel Source.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Excel Connection Manager]"
+                  connectionManagerRefId="Package.ConnectionManagers[Excel Connection Manager]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task Detalle\Excel Source.Outputs[Excel Source Output]"
+                  name="Excel Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task Detalle\Excel Source.Outputs[Excel Source Output].Columns[ID]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task Detalle\Excel Source.Outputs[Excel Source Output].ExternalColumns[ID]"
+                      lineageId="Package\Data Flow Task Detalle\Excel Source.Outputs[Excel Source Output].Columns[ID]"
+                      name="ID"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task Detalle\Excel Source.Outputs[Excel Source Output].Columns[TIPO DE MUERTE]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task Detalle\Excel Source.Outputs[Excel Source Output].ExternalColumns[TIPO DE MUERTE]"
+                      length="255"
+                      lineageId="Package\Data Flow Task Detalle\Excel Source.Outputs[Excel Source Output].Columns[TIPO DE MUERTE]"
+                      name="TIPO DE MUERTE"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task Detalle\Excel Source.Outputs[Excel Source Output].Columns[PROVINCIA]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task Detalle\Excel Source.Outputs[Excel Source Output].ExternalColumns[PROVINCIA]"
+                      length="255"
+                      lineageId="Package\Data Flow Task Detalle\Excel Source.Outputs[Excel Source Output].Columns[PROVINCIA]"
+                      name="PROVINCIA"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task Detalle\Excel Source.Outputs[Excel Source Output].Columns[CANTÓN]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task Detalle\Excel Source.Outputs[Excel Source Output].ExternalColumns[CANTÓN]"
+                      length="255"
+                      lineageId="Package\Data Flow Task Detalle\Excel Source.Outputs[Excel Source Output].Columns[CANTÓN]"
+                      name="CANTÓN"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task Detalle\Excel Source.Outputs[Excel Source Output].Columns[MES]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task Detalle\Excel Source.Outputs[Excel Source Output].ExternalColumns[MES]"
+                      length="255"
+                      lineageId="Package\Data Flow Task Detalle\Excel Source.Outputs[Excel Source Output].Columns[MES]"
+                      name="MES"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task Detalle\Excel Source.Outputs[Excel Source Output].Columns[AÑO]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task Detalle\Excel Source.Outputs[Excel Source Output].ExternalColumns[AÑO]"
+                      lineageId="Package\Data Flow Task Detalle\Excel Source.Outputs[Excel Source Output].Columns[AÑO]"
+                      name="AÑO"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task Detalle\Excel Source.Outputs[Excel Source Output].Columns[TIPO DE ARMA]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task Detalle\Excel Source.Outputs[Excel Source Output].ExternalColumns[TIPO DE ARMA]"
+                      length="255"
+                      lineageId="Package\Data Flow Task Detalle\Excel Source.Outputs[Excel Source Output].Columns[TIPO DE ARMA]"
+                      name="TIPO DE ARMA"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task Detalle\Excel Source.Outputs[Excel Source Output].Columns[RANGO DE EDAD]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task Detalle\Excel Source.Outputs[Excel Source Output].ExternalColumns[RANGO DE EDAD]"
+                      length="255"
+                      lineageId="Package\Data Flow Task Detalle\Excel Source.Outputs[Excel Source Output].Columns[RANGO DE EDAD]"
+                      name="RANGO DE EDAD"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task Detalle\Excel Source.Outputs[Excel Source Output].Columns[SEXO]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task Detalle\Excel Source.Outputs[Excel Source Output].ExternalColumns[SEXO]"
+                      length="255"
+                      lineageId="Package\Data Flow Task Detalle\Excel Source.Outputs[Excel Source Output].Columns[SEXO]"
+                      name="SEXO"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task Detalle\Excel Source.Outputs[Excel Source Output].Columns[# HOMICIDIOS]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task Detalle\Excel Source.Outputs[Excel Source Output].ExternalColumns[# HOMICIDIOS]"
+                      lineageId="Package\Data Flow Task Detalle\Excel Source.Outputs[Excel Source Output].Columns[# HOMICIDIOS]"
+                      name="# HOMICIDIOS"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task Detalle\Excel Source.Outputs[Excel Source Output].Columns[ID localidad]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task Detalle\Excel Source.Outputs[Excel Source Output].ExternalColumns[ID localidad]"
+                      lineageId="Package\Data Flow Task Detalle\Excel Source.Outputs[Excel Source Output].Columns[ID localidad]"
+                      name="ID localidad"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task Detalle\Excel Source.Outputs[Excel Source Output].Columns[ID clasificacion]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task Detalle\Excel Source.Outputs[Excel Source Output].ExternalColumns[ID clasificacion]"
+                      lineageId="Package\Data Flow Task Detalle\Excel Source.Outputs[Excel Source Output].Columns[ID clasificacion]"
+                      name="ID clasificacion"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task Detalle\Excel Source.Outputs[Excel Source Output].Columns[Periodo]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task Detalle\Excel Source.Outputs[Excel Source Output].ExternalColumns[Periodo]"
+                      length="255"
+                      lineageId="Package\Data Flow Task Detalle\Excel Source.Outputs[Excel Source Output].Columns[Periodo]"
+                      name="Periodo"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task Detalle\Excel Source.Outputs[Excel Source Output].ExternalColumns[ID]"
+                      dataType="r8"
+                      name="ID" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task Detalle\Excel Source.Outputs[Excel Source Output].ExternalColumns[TIPO DE MUERTE]"
+                      dataType="wstr"
+                      length="255"
+                      name="TIPO DE MUERTE" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task Detalle\Excel Source.Outputs[Excel Source Output].ExternalColumns[PROVINCIA]"
+                      dataType="wstr"
+                      length="255"
+                      name="PROVINCIA" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task Detalle\Excel Source.Outputs[Excel Source Output].ExternalColumns[CANTÓN]"
+                      dataType="wstr"
+                      length="255"
+                      name="CANTÓN" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task Detalle\Excel Source.Outputs[Excel Source Output].ExternalColumns[MES]"
+                      dataType="wstr"
+                      length="255"
+                      name="MES" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task Detalle\Excel Source.Outputs[Excel Source Output].ExternalColumns[AÑO]"
+                      dataType="r8"
+                      name="AÑO" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task Detalle\Excel Source.Outputs[Excel Source Output].ExternalColumns[TIPO DE ARMA]"
+                      dataType="wstr"
+                      length="255"
+                      name="TIPO DE ARMA" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task Detalle\Excel Source.Outputs[Excel Source Output].ExternalColumns[RANGO DE EDAD]"
+                      dataType="wstr"
+                      length="255"
+                      name="RANGO DE EDAD" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task Detalle\Excel Source.Outputs[Excel Source Output].ExternalColumns[SEXO]"
+                      dataType="wstr"
+                      length="255"
+                      name="SEXO" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task Detalle\Excel Source.Outputs[Excel Source Output].ExternalColumns[# HOMICIDIOS]"
+                      dataType="r8"
+                      name="# HOMICIDIOS" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task Detalle\Excel Source.Outputs[Excel Source Output].ExternalColumns[ID localidad]"
+                      dataType="r8"
+                      name="ID localidad" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task Detalle\Excel Source.Outputs[Excel Source Output].ExternalColumns[ID clasificacion]"
+                      dataType="r8"
+                      name="ID clasificacion" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task Detalle\Excel Source.Outputs[Excel Source Output].ExternalColumns[Periodo]"
+                      dataType="wstr"
+                      length="255"
+                      name="Periodo" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Data Flow Task Detalle\Excel Source.Outputs[Excel Source Error Output]"
+                  isErrorOut="true"
+                  name="Excel Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task Detalle\Excel Source.Outputs[Excel Source Error Output].Columns[ID]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Task Detalle\Excel Source.Outputs[Excel Source Error Output].Columns[ID]"
+                      name="ID" />
+                    <outputColumn
+                      refId="Package\Data Flow Task Detalle\Excel Source.Outputs[Excel Source Error Output].Columns[TIPO DE MUERTE]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Data Flow Task Detalle\Excel Source.Outputs[Excel Source Error Output].Columns[TIPO DE MUERTE]"
+                      name="TIPO DE MUERTE" />
+                    <outputColumn
+                      refId="Package\Data Flow Task Detalle\Excel Source.Outputs[Excel Source Error Output].Columns[PROVINCIA]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Data Flow Task Detalle\Excel Source.Outputs[Excel Source Error Output].Columns[PROVINCIA]"
+                      name="PROVINCIA" />
+                    <outputColumn
+                      refId="Package\Data Flow Task Detalle\Excel Source.Outputs[Excel Source Error Output].Columns[CANTÓN]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Data Flow Task Detalle\Excel Source.Outputs[Excel Source Error Output].Columns[CANTÓN]"
+                      name="CANTÓN" />
+                    <outputColumn
+                      refId="Package\Data Flow Task Detalle\Excel Source.Outputs[Excel Source Error Output].Columns[MES]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Data Flow Task Detalle\Excel Source.Outputs[Excel Source Error Output].Columns[MES]"
+                      name="MES" />
+                    <outputColumn
+                      refId="Package\Data Flow Task Detalle\Excel Source.Outputs[Excel Source Error Output].Columns[AÑO]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Task Detalle\Excel Source.Outputs[Excel Source Error Output].Columns[AÑO]"
+                      name="AÑO" />
+                    <outputColumn
+                      refId="Package\Data Flow Task Detalle\Excel Source.Outputs[Excel Source Error Output].Columns[TIPO DE ARMA]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Data Flow Task Detalle\Excel Source.Outputs[Excel Source Error Output].Columns[TIPO DE ARMA]"
+                      name="TIPO DE ARMA" />
+                    <outputColumn
+                      refId="Package\Data Flow Task Detalle\Excel Source.Outputs[Excel Source Error Output].Columns[RANGO DE EDAD]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Data Flow Task Detalle\Excel Source.Outputs[Excel Source Error Output].Columns[RANGO DE EDAD]"
+                      name="RANGO DE EDAD" />
+                    <outputColumn
+                      refId="Package\Data Flow Task Detalle\Excel Source.Outputs[Excel Source Error Output].Columns[SEXO]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Data Flow Task Detalle\Excel Source.Outputs[Excel Source Error Output].Columns[SEXO]"
+                      name="SEXO" />
+                    <outputColumn
+                      refId="Package\Data Flow Task Detalle\Excel Source.Outputs[Excel Source Error Output].Columns[# HOMICIDIOS]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Task Detalle\Excel Source.Outputs[Excel Source Error Output].Columns[# HOMICIDIOS]"
+                      name="# HOMICIDIOS" />
+                    <outputColumn
+                      refId="Package\Data Flow Task Detalle\Excel Source.Outputs[Excel Source Error Output].Columns[ID localidad]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Task Detalle\Excel Source.Outputs[Excel Source Error Output].Columns[ID localidad]"
+                      name="ID localidad" />
+                    <outputColumn
+                      refId="Package\Data Flow Task Detalle\Excel Source.Outputs[Excel Source Error Output].Columns[ID clasificacion]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Task Detalle\Excel Source.Outputs[Excel Source Error Output].Columns[ID clasificacion]"
+                      name="ID clasificacion" />
+                    <outputColumn
+                      refId="Package\Data Flow Task Detalle\Excel Source.Outputs[Excel Source Error Output].Columns[Periodo]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Data Flow Task Detalle\Excel Source.Outputs[Excel Source Error Output].Columns[Periodo]"
+                      name="Periodo" />
+                    <outputColumn
+                      refId="Package\Data Flow Task Detalle\Excel Source.Outputs[Excel Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task Detalle\Excel Source.Outputs[Excel Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task Detalle\Excel Source.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task Detalle\Excel Source.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task Detalle\OLE DB Destination"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="OLE DB Destination"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[DetalleCrimen]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task Detalle\OLE DB Destination.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DIEGOHL\SQLDEV.EstadSeguridadHC]"
+                  connectionManagerRefId="Package.ConnectionManagers[DIEGOHL\SQLDEV.EstadSeguridadHC]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task Detalle\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task Detalle\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[RANGO DE EDAD]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="RANGO DE EDAD"
+                      externalMetadataColumnId="Package\Data Flow Task Detalle\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[EdadVictima]"
+                      lineageId="Package\Data Flow Task Detalle\Excel Source.Outputs[Excel Source Output].Columns[RANGO DE EDAD]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task Detalle\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[SEXO]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="SEXO"
+                      externalMetadataColumnId="Package\Data Flow Task Detalle\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[GeneroPerpetuador]"
+                      lineageId="Package\Data Flow Task Detalle\Excel Source.Outputs[Excel Source Output].Columns[SEXO]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task Detalle\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[TIPO DE ARMA]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="TIPO DE ARMA"
+                      externalMetadataColumnId="Package\Data Flow Task Detalle\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[TipoArma]"
+                      lineageId="Package\Data Flow Task Detalle\Excel Source.Outputs[Excel Source Output].Columns[TIPO DE ARMA]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task Detalle\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[ID]"
+                      cachedDataType="r8"
+                      cachedName="ID"
+                      externalMetadataColumnId="Package\Data Flow Task Detalle\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CrimenID]"
+                      lineageId="Package\Data Flow Task Detalle\Excel Source.Outputs[Excel Source Output].Columns[ID]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task Detalle\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CrimenID]"
+                      dataType="i4"
+                      name="CrimenID" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task Detalle\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[EdadVictima]"
+                      dataType="wstr"
+                      length="100"
+                      name="EdadVictima" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task Detalle\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[GeneroPerpetuador]"
+                      dataType="wstr"
+                      length="100"
+                      name="GeneroPerpetuador" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task Detalle\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[TipoArma]"
+                      dataType="wstr"
+                      length="100"
+                      name="TipoArma" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task Detalle\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Data Flow Task Detalle\OLE DB Destination.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task Detalle\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task Detalle\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task Detalle\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task Detalle\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Data Flow Task Detalle.Paths[Excel Source Output]"
+              endId="Package\Data Flow Task Detalle\OLE DB Destination.Inputs[OLE DB Destination Input]"
+              name="Excel Source Output"
+              startId="Package\Data Flow Task Detalle\Excel Source.Outputs[Excel Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Data Flow Task Localidad"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:Disabled="True"
+      DTS:DTSID="{D375058E-3BB0-4796-A135-FA3D21179FF6}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Data Flow Task Localidad"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Data Flow Task Localidad\Excel Source"
               componentClassID="Microsoft.ExcelSource"
               contactInfo="Excel Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
               description="Excel Source"
@@ -344,7 +1388,7 @@
               </properties>
               <connections>
                 <connection
-                  refId="Package\Data Flow Task Localidades\Excel Source.Connections[OleDbConnection]"
+                  refId="Package\Data Flow Task Localidad\Excel Source.Connections[OleDbConnection]"
                   connectionManagerID="Package.ConnectionManagers[Excel Connection Manager]"
                   connectionManagerRefId="Package.ConnectionManagers[Excel Connection Manager]"
                   description="The OLE DB runtime connection used to access the database."
@@ -352,89 +1396,107 @@
               </connections>
               <outputs>
                 <output
-                  refId="Package\Data Flow Task Localidades\Excel Source.Outputs[Excel Source Output]"
+                  refId="Package\Data Flow Task Localidad\Excel Source.Outputs[Excel Source Output]"
                   name="Excel Source Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Data Flow Task Localidades\Excel Source.Outputs[Excel Source Output].Columns[Provincia]"
+                      refId="Package\Data Flow Task Localidad\Excel Source.Outputs[Excel Source Output].Columns[Provincia]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task Localidades\Excel Source.Outputs[Excel Source Output].ExternalColumns[Provincia]"
+                      externalMetadataColumnId="Package\Data Flow Task Localidad\Excel Source.Outputs[Excel Source Output].ExternalColumns[Provincia]"
                       length="255"
-                      lineageId="Package\Data Flow Task Localidades\Excel Source.Outputs[Excel Source Output].Columns[Provincia]"
+                      lineageId="Package\Data Flow Task Localidad\Excel Source.Outputs[Excel Source Output].Columns[Provincia]"
                       name="Provincia"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Data Flow Task Localidades\Excel Source.Outputs[Excel Source Output].Columns[Cantón]"
+                      refId="Package\Data Flow Task Localidad\Excel Source.Outputs[Excel Source Output].Columns[Cantón]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task Localidades\Excel Source.Outputs[Excel Source Output].ExternalColumns[Cantón]"
+                      externalMetadataColumnId="Package\Data Flow Task Localidad\Excel Source.Outputs[Excel Source Output].ExternalColumns[Cantón]"
                       length="255"
-                      lineageId="Package\Data Flow Task Localidades\Excel Source.Outputs[Excel Source Output].Columns[Cantón]"
+                      lineageId="Package\Data Flow Task Localidad\Excel Source.Outputs[Excel Source Output].Columns[Cantón]"
                       name="Cantón"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Data Flow Task Localidades\Excel Source.Outputs[Excel Source Output].Columns[Población]"
+                      refId="Package\Data Flow Task Localidad\Excel Source.Outputs[Excel Source Output].Columns[Población]"
                       dataType="r8"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task Localidades\Excel Source.Outputs[Excel Source Output].ExternalColumns[Población]"
-                      lineageId="Package\Data Flow Task Localidades\Excel Source.Outputs[Excel Source Output].Columns[Población]"
+                      externalMetadataColumnId="Package\Data Flow Task Localidad\Excel Source.Outputs[Excel Source Output].ExternalColumns[Población]"
+                      lineageId="Package\Data Flow Task Localidad\Excel Source.Outputs[Excel Source Output].Columns[Población]"
                       name="Población"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task Localidad\Excel Source.Outputs[Excel Source Output].Columns[ID]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task Localidad\Excel Source.Outputs[Excel Source Output].ExternalColumns[ID]"
+                      lineageId="Package\Data Flow Task Localidad\Excel Source.Outputs[Excel Source Output].Columns[ID]"
+                      name="ID"
                       truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task Localidades\Excel Source.Outputs[Excel Source Output].ExternalColumns[Provincia]"
+                      refId="Package\Data Flow Task Localidad\Excel Source.Outputs[Excel Source Output].ExternalColumns[Provincia]"
                       dataType="wstr"
                       length="255"
                       name="Provincia" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task Localidades\Excel Source.Outputs[Excel Source Output].ExternalColumns[Cantón]"
+                      refId="Package\Data Flow Task Localidad\Excel Source.Outputs[Excel Source Output].ExternalColumns[Cantón]"
                       dataType="wstr"
                       length="255"
                       name="Cantón" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task Localidades\Excel Source.Outputs[Excel Source Output].ExternalColumns[Población]"
+                      refId="Package\Data Flow Task Localidad\Excel Source.Outputs[Excel Source Output].ExternalColumns[Población]"
                       dataType="r8"
                       name="Población" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task Localidad\Excel Source.Outputs[Excel Source Output].ExternalColumns[ID]"
+                      dataType="r8"
+                      name="ID" />
                   </externalMetadataColumns>
                 </output>
                 <output
-                  refId="Package\Data Flow Task Localidades\Excel Source.Outputs[Excel Source Error Output]"
+                  refId="Package\Data Flow Task Localidad\Excel Source.Outputs[Excel Source Error Output]"
                   isErrorOut="true"
                   name="Excel Source Error Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Data Flow Task Localidades\Excel Source.Outputs[Excel Source Error Output].Columns[Provincia]"
+                      refId="Package\Data Flow Task Localidad\Excel Source.Outputs[Excel Source Error Output].Columns[Provincia]"
                       dataType="wstr"
                       length="255"
-                      lineageId="Package\Data Flow Task Localidades\Excel Source.Outputs[Excel Source Error Output].Columns[Provincia]"
+                      lineageId="Package\Data Flow Task Localidad\Excel Source.Outputs[Excel Source Error Output].Columns[Provincia]"
                       name="Provincia" />
                     <outputColumn
-                      refId="Package\Data Flow Task Localidades\Excel Source.Outputs[Excel Source Error Output].Columns[Cantón]"
+                      refId="Package\Data Flow Task Localidad\Excel Source.Outputs[Excel Source Error Output].Columns[Cantón]"
                       dataType="wstr"
                       length="255"
-                      lineageId="Package\Data Flow Task Localidades\Excel Source.Outputs[Excel Source Error Output].Columns[Cantón]"
+                      lineageId="Package\Data Flow Task Localidad\Excel Source.Outputs[Excel Source Error Output].Columns[Cantón]"
                       name="Cantón" />
                     <outputColumn
-                      refId="Package\Data Flow Task Localidades\Excel Source.Outputs[Excel Source Error Output].Columns[Población]"
+                      refId="Package\Data Flow Task Localidad\Excel Source.Outputs[Excel Source Error Output].Columns[Población]"
                       dataType="r8"
-                      lineageId="Package\Data Flow Task Localidades\Excel Source.Outputs[Excel Source Error Output].Columns[Población]"
+                      lineageId="Package\Data Flow Task Localidad\Excel Source.Outputs[Excel Source Error Output].Columns[Población]"
                       name="Población" />
                     <outputColumn
-                      refId="Package\Data Flow Task Localidades\Excel Source.Outputs[Excel Source Error Output].Columns[ErrorCode]"
+                      refId="Package\Data Flow Task Localidad\Excel Source.Outputs[Excel Source Error Output].Columns[ID]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Task Localidad\Excel Source.Outputs[Excel Source Error Output].Columns[ID]"
+                      name="ID" />
+                    <outputColumn
+                      refId="Package\Data Flow Task Localidad\Excel Source.Outputs[Excel Source Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task Localidades\Excel Source.Outputs[Excel Source Error Output].Columns[ErrorCode]"
+                      lineageId="Package\Data Flow Task Localidad\Excel Source.Outputs[Excel Source Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Data Flow Task Localidades\Excel Source.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                      refId="Package\Data Flow Task Localidad\Excel Source.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task Localidades\Excel Source.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\Data Flow Task Localidad\Excel Source.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -443,7 +1505,7 @@
               </outputs>
             </component>
             <component
-              refId="Package\Data Flow Task Localidades\OLE DB Destination"
+              refId="Package\Data Flow Task Localidad\OLE DB Destination"
               componentClassID="Microsoft.OLEDBDestination"
               contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
               description="OLE DB Destination"
@@ -500,59 +1562,59 @@
               </properties>
               <connections>
                 <connection
-                  refId="Package\Data Flow Task Localidades\OLE DB Destination.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[DIEGOHL\SQlDEV.EstadSeguridadHC]"
-                  connectionManagerRefId="Package.ConnectionManagers[DIEGOHL\SQlDEV.EstadSeguridadHC]"
+                  refId="Package\Data Flow Task Localidad\OLE DB Destination.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DIEGOHL\SQLDEV.EstadSeguridadHC]"
+                  connectionManagerRefId="Package.ConnectionManagers[DIEGOHL\SQLDEV.EstadSeguridadHC]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
               <inputs>
                 <input
-                  refId="Package\Data Flow Task Localidades\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  refId="Package\Data Flow Task Localidad\OLE DB Destination.Inputs[OLE DB Destination Input]"
                   errorOrTruncationOperation="Insert"
                   errorRowDisposition="FailComponent"
                   hasSideEffects="true"
                   name="OLE DB Destination Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Data Flow Task Localidades\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Provincia]"
+                      refId="Package\Data Flow Task Localidad\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Provincia]"
                       cachedDataType="wstr"
                       cachedLength="255"
                       cachedName="Provincia"
-                      externalMetadataColumnId="Package\Data Flow Task Localidades\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Provincia]"
-                      lineageId="Package\Data Flow Task Localidades\Excel Source.Outputs[Excel Source Output].Columns[Provincia]" />
+                      externalMetadataColumnId="Package\Data Flow Task Localidad\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Provincia]"
+                      lineageId="Package\Data Flow Task Localidad\Excel Source.Outputs[Excel Source Output].Columns[Provincia]" />
                     <inputColumn
-                      refId="Package\Data Flow Task Localidades\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Cantón]"
+                      refId="Package\Data Flow Task Localidad\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Cantón]"
                       cachedDataType="wstr"
                       cachedLength="255"
                       cachedName="Cantón"
-                      externalMetadataColumnId="Package\Data Flow Task Localidades\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Canton]"
-                      lineageId="Package\Data Flow Task Localidades\Excel Source.Outputs[Excel Source Output].Columns[Cantón]" />
+                      externalMetadataColumnId="Package\Data Flow Task Localidad\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Canton]"
+                      lineageId="Package\Data Flow Task Localidad\Excel Source.Outputs[Excel Source Output].Columns[Cantón]" />
                     <inputColumn
-                      refId="Package\Data Flow Task Localidades\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Población]"
+                      refId="Package\Data Flow Task Localidad\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Población]"
                       cachedDataType="r8"
                       cachedName="Población"
-                      externalMetadataColumnId="Package\Data Flow Task Localidades\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Poblacion]"
-                      lineageId="Package\Data Flow Task Localidades\Excel Source.Outputs[Excel Source Output].Columns[Población]" />
+                      externalMetadataColumnId="Package\Data Flow Task Localidad\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Poblacion]"
+                      lineageId="Package\Data Flow Task Localidad\Excel Source.Outputs[Excel Source Output].Columns[Población]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task Localidades\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[LocalidadID]"
+                      refId="Package\Data Flow Task Localidad\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[LocalidadID]"
                       dataType="i4"
                       name="LocalidadID" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task Localidades\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Canton]"
+                      refId="Package\Data Flow Task Localidad\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Canton]"
                       dataType="wstr"
                       length="100"
                       name="Canton" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task Localidades\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Provincia]"
+                      refId="Package\Data Flow Task Localidad\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Provincia]"
                       dataType="wstr"
                       length="100"
                       name="Provincia" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task Localidades\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Poblacion]"
+                      refId="Package\Data Flow Task Localidad\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Poblacion]"
                       dataType="i4"
                       name="Poblacion" />
                   </externalMetadataColumns>
@@ -560,22 +1622,22 @@
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Data Flow Task Localidades\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
+                  refId="Package\Data Flow Task Localidad\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
                   exclusionGroup="1"
                   isErrorOut="true"
                   name="OLE DB Destination Error Output"
-                  synchronousInputId="Package\Data Flow Task Localidades\OLE DB Destination.Inputs[OLE DB Destination Input]">
+                  synchronousInputId="Package\Data Flow Task Localidad\OLE DB Destination.Inputs[OLE DB Destination Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Data Flow Task Localidades\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      refId="Package\Data Flow Task Localidad\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task Localidades\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      lineageId="Package\Data Flow Task Localidad\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Data Flow Task Localidades\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      refId="Package\Data Flow Task Localidad\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task Localidades\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\Data Flow Task Localidad\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -586,10 +1648,10 @@
           </components>
           <paths>
             <path
-              refId="Package\Data Flow Task Localidades.Paths[Excel Source Output]"
-              endId="Package\Data Flow Task Localidades\OLE DB Destination.Inputs[OLE DB Destination Input]"
+              refId="Package\Data Flow Task Localidad.Paths[Excel Source Output]"
+              endId="Package\Data Flow Task Localidad\OLE DB Destination.Inputs[OLE DB Destination Input]"
               name="Excel Source Output"
-              startId="Package\Data Flow Task Localidades\Excel Source.Outputs[Excel Source Output]" />
+              startId="Package\Data Flow Task Localidad\Excel Source.Outputs[Excel Source Output]" />
           </paths>
         </pipeline>
       </DTS:ObjectData>
@@ -608,55 +1670,63 @@
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
         <NodeLayout
-          Size="209,42"
-          Id="Package\Data Flow Task Localidades"
-          TopLeft="60.5,34.5" />
+          Size="212,42"
+          Id="Package\Data Flow Task Clasificacion"
+          TopLeft="101,79" />
         <NodeLayout
-          Size="222,42"
-          Id="Package\Data Flow Task Clasificaciones"
-          TopLeft="330,36" />
+          Size="188,42"
+          Id="Package\Data Flow Task Crimen"
+          TopLeft="614,87" />
+        <NodeLayout
+          Size="187,42"
+          Id="Package\Data Flow Task Detalle"
+          TopLeft="880,83" />
+        <NodeLayout
+          Size="199,42"
+          Id="Package\Data Flow Task Localidad"
+          TopLeft="362,82" />
       </GraphLayout>
     </LayoutInfo>
   </Package>
   <TaskHost
-    design-time-name="Package\Data Flow Task Localidades">
+    design-time-name="Package\Data Flow Task Clasificacion">
     <LayoutInfo>
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="139,42"
-          Id="Package\Data Flow Task Localidades\Excel Source"
-          TopLeft="201,150" />
+          Id="Package\Data Flow Task Clasificacion\Excel Source"
+          TopLeft="164,167" />
         <NodeLayout
           Size="171,42"
-          Id="Package\Data Flow Task Localidades\OLE DB Destination"
-          TopLeft="431,309" />
+          Id="Package\Data Flow Task Clasificacion\OLE DB Destination"
+          TopLeft="320,254" />
         <EdgeLayout
-          Id="Package\Data Flow Task Localidades.Paths[Excel Source Output]"
-          TopLeft="270.5,192">
+          Id="Package\Data Flow Task Clasificacion.Paths[Excel Source Output]"
+          TopLeft="233.5,209">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="246,117"
+              EndConnector="172,45"
               Start="0,0"
-              End="246,109.5">
+              End="172,37.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,54.5" />
+                    End="0,18.5" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,54.5"
-                    Point2="0,58.5"
-                    Point3="4,58.5" />
+                    Point1="0,18.5"
+                    Point2="0,22.5"
+                    Point3="4,22.5" />
                   <mssgle:LineSegment
-                    End="242,58.5" />
+                    End="168,22.5" />
                   <mssgle:CubicBezierSegment
-                    Point1="242,58.5"
-                    Point2="246,58.5"
-                    Point3="246,62.5" />
+                    Point1="168,22.5"
+                    Point2="172,22.5"
+                    Point3="172,26.5" />
                   <mssgle:LineSegment
-                    End="246,109.5" />
+                    End="172,37.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -669,7 +1739,7 @@
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task Localidades\Excel Source">
+    design-time-name="Package\Data Flow Task Clasificacion\Excel Source">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -682,7 +1752,7 @@
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task Localidades\OLE DB Destination">
+    design-time-name="Package\Data Flow Task Clasificacion\OLE DB Destination">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -695,44 +1765,44 @@
     </Properties>
   </PipelineComponentMetadata>
   <TaskHost
-    design-time-name="Package\Data Flow Task Clasificaciones">
+    design-time-name="Package\Data Flow Task Crimen">
     <LayoutInfo>
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="139,42"
-          Id="Package\Data Flow Task Clasificaciones\Excel Source"
-          TopLeft="224,124" />
-        <NodeLayout
           Size="171,42"
-          Id="Package\Data Flow Task Clasificaciones\OLE DB Destination"
-          TopLeft="407,244" />
+          Id="Package\Data Flow Task Crimen\OLE DB Destination"
+          TopLeft="380,313" />
+        <NodeLayout
+          Size="139,42"
+          Id="Package\Data Flow Task Crimen\Excel Source"
+          TopLeft="209,172" />
         <EdgeLayout
-          Id="Package\Data Flow Task Clasificaciones.Paths[Excel Source Output]"
-          TopLeft="293.5,166">
+          Id="Package\Data Flow Task Crimen.Paths[Excel Source Output]"
+          TopLeft="278.5,214">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="199,78"
+              EndConnector="187,99"
               Start="0,0"
-              End="199,70.5">
+              End="187,91.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,35" />
+                    End="0,45.5" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,35"
-                    Point2="0,39"
-                    Point3="4,39" />
+                    Point1="0,45.5"
+                    Point2="0,49.5"
+                    Point3="4,49.5" />
                   <mssgle:LineSegment
-                    End="195,39" />
+                    End="183,49.5" />
                   <mssgle:CubicBezierSegment
-                    Point1="195,39"
-                    Point2="199,39"
-                    Point3="199,43" />
+                    Point1="183,49.5"
+                    Point2="187,49.5"
+                    Point3="187,53.5" />
                   <mssgle:LineSegment
-                    End="199,70.5" />
+                    End="187,91.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -745,7 +1815,7 @@
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task Clasificaciones\Excel Source">
+    design-time-name="Package\Data Flow Task Crimen\Excel Source">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -758,7 +1828,159 @@
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task Clasificaciones\OLE DB Destination">
+    design-time-name="Package\Data Flow Task Crimen\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\Data Flow Task Detalle">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="171,42"
+          Id="Package\Data Flow Task Detalle\OLE DB Destination"
+          TopLeft="393,360" />
+        <NodeLayout
+          Size="139,42"
+          Id="Package\Data Flow Task Detalle\Excel Source"
+          TopLeft="195,216" />
+        <EdgeLayout
+          Id="Package\Data Flow Task Detalle.Paths[Excel Source Output]"
+          TopLeft="264.5,258">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="214,102"
+              Start="0,0"
+              End="214,94.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,47" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,47"
+                    Point2="0,51"
+                    Point3="4,51" />
+                  <mssgle:LineSegment
+                    End="210,51" />
+                  <mssgle:CubicBezierSegment
+                    Point1="210,51"
+                    Point2="214,51"
+                    Point3="214,55" />
+                  <mssgle:LineSegment
+                    End="214,94.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task Detalle\Excel Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task Detalle\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\Data Flow Task Localidad">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="171,42"
+          Id="Package\Data Flow Task Localidad\OLE DB Destination"
+          TopLeft="451,297" />
+        <NodeLayout
+          Size="139,42"
+          Id="Package\Data Flow Task Localidad\Excel Source"
+          TopLeft="253,108" />
+        <EdgeLayout
+          Id="Package\Data Flow Task Localidad.Paths[Excel Source Output]"
+          TopLeft="322.5,150">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="214,147"
+              Start="0,0"
+              End="214,139.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,69.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,69.5"
+                    Point2="0,73.5"
+                    Point3="4,73.5" />
+                  <mssgle:LineSegment
+                    End="210,73.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="210,73.5"
+                    Point2="214,73.5"
+                    Point3="214,77.5" />
+                  <mssgle:LineSegment
+                    End="214,139.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task Localidad\Excel Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task Localidad\OLE DB Destination">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
