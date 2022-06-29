@@ -11,15 +11,15 @@
   DTS:LocaleID="12298"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="15"
-  DTS:VersionGUID="{25A65A0F-9728-4D82-98E6-D93C95AB8D48}">
+  DTS:VersionBuild="30"
+  DTS:VersionGUID="{010019C1-6ACC-40E2-AD4C-9A6947A1F895}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
     <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[DIEGOHL\SQLDEV.EstadSeguridadHC]"
       DTS:CreationName="OLEDB"
-      DTS:DTSID="{77A4E72C-753C-468A-968A-441CF322FC53}"
+      DTS:DTSID="{C94D2CE1-3BB2-425F-8754-01123209B332}"
       DTS:ObjectName="DIEGOHL\SQLDEV.EstadSeguridadHC">
       <DTS:ObjectData>
         <DTS:ConnectionManager
@@ -31,13 +31,13 @@
     <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[Excel Connection Manager]"
       DTS:CreationName="EXCEL"
-      DTS:DTSID="{F249B2E5-830F-46D5-81C4-3B74E2B25F3B}"
+      DTS:DTSID="{7B9331D3-1978-42D4-8C6D-F5248070CFA4}"
       DTS:ObjectName="Excel Connection Manager">
       <DTS:ObjectData>
         <DTS:ConnectionManager
           DTS:ConnectRetryCount="0"
           DTS:ConnectRetryInterval="0"
-          DTS:ConnectionString="Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Code-UDLA\BDIII\Proyecto-BI-Hiriart-Corales\Homicidios intencionales 25-05-2022 Excel 97 03.xls;Extended Properties=&quot;EXCEL 8.0;HDR=YES&quot;;" />
+          DTS:ConnectionString="Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Code-UDLA\BDIII\Proyecto-BI-Hiriart-Corales\Homicidios intencionales 25-05-2022 Excel 97 03.xls;Extended Properties=&quot;Excel 8.0;HDR=YES&quot;;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
   </DTS:ConnectionManagers>
@@ -112,6 +112,15 @@
                   name="Excel Source Output">
                   <outputColumns>
                     <outputColumn
+                      refId="Package\Data Flow Task Clasificacion\Excel Source.Outputs[Excel Source Output].Columns[ID]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task Clasificacion\Excel Source.Outputs[Excel Source Output].ExternalColumns[ID]"
+                      lineageId="Package\Data Flow Task Clasificacion\Excel Source.Outputs[Excel Source Output].Columns[ID]"
+                      name="ID"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
                       refId="Package\Data Flow Task Clasificacion\Excel Source.Outputs[Excel Source Output].Columns[Nombre]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
@@ -121,27 +130,18 @@
                       lineageId="Package\Data Flow Task Clasificacion\Excel Source.Outputs[Excel Source Output].Columns[Nombre]"
                       name="Nombre"
                       truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Data Flow Task Clasificacion\Excel Source.Outputs[Excel Source Output].Columns[ID]"
-                      dataType="r8"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task Clasificacion\Excel Source.Outputs[Excel Source Output].ExternalColumns[ID]"
-                      lineageId="Package\Data Flow Task Clasificacion\Excel Source.Outputs[Excel Source Output].Columns[ID]"
-                      name="ID"
-                      truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
                     isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task Clasificacion\Excel Source.Outputs[Excel Source Output].ExternalColumns[ID]"
+                      dataType="r8"
+                      name="ID" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Task Clasificacion\Excel Source.Outputs[Excel Source Output].ExternalColumns[Nombre]"
                       dataType="wstr"
                       length="255"
                       name="Nombre" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task Clasificacion\Excel Source.Outputs[Excel Source Output].ExternalColumns[ID]"
-                      dataType="r8"
-                      name="ID" />
                   </externalMetadataColumns>
                 </output>
                 <output
@@ -500,6 +500,36 @@
                       lineageId="Package\Data Flow Task Crimen\Excel Source.Outputs[Excel Source Output].Columns[Periodo]"
                       name="Periodo"
                       truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task Crimen\Excel Source.Outputs[Excel Source Output].Columns[F14]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task Crimen\Excel Source.Outputs[Excel Source Output].ExternalColumns[F14]"
+                      length="255"
+                      lineageId="Package\Data Flow Task Crimen\Excel Source.Outputs[Excel Source Output].Columns[F14]"
+                      name="F14"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task Crimen\Excel Source.Outputs[Excel Source Output].Columns[F15]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task Crimen\Excel Source.Outputs[Excel Source Output].ExternalColumns[F15]"
+                      length="255"
+                      lineageId="Package\Data Flow Task Crimen\Excel Source.Outputs[Excel Source Output].Columns[F15]"
+                      name="F15"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task Crimen\Excel Source.Outputs[Excel Source Output].Columns[F16]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task Crimen\Excel Source.Outputs[Excel Source Output].ExternalColumns[F16]"
+                      length="255"
+                      lineageId="Package\Data Flow Task Crimen\Excel Source.Outputs[Excel Source Output].Columns[F16]"
+                      name="F16"
+                      truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -563,6 +593,21 @@
                       dataType="wstr"
                       length="255"
                       name="Periodo" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task Crimen\Excel Source.Outputs[Excel Source Output].ExternalColumns[F14]"
+                      dataType="wstr"
+                      length="255"
+                      name="F14" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task Crimen\Excel Source.Outputs[Excel Source Output].ExternalColumns[F15]"
+                      dataType="wstr"
+                      length="255"
+                      name="F15" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task Crimen\Excel Source.Outputs[Excel Source Output].ExternalColumns[F16]"
+                      dataType="wstr"
+                      length="255"
+                      name="F16" />
                   </externalMetadataColumns>
                 </output>
                 <output
@@ -643,6 +688,24 @@
                       length="255"
                       lineageId="Package\Data Flow Task Crimen\Excel Source.Outputs[Excel Source Error Output].Columns[Periodo]"
                       name="Periodo" />
+                    <outputColumn
+                      refId="Package\Data Flow Task Crimen\Excel Source.Outputs[Excel Source Error Output].Columns[F14]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Data Flow Task Crimen\Excel Source.Outputs[Excel Source Error Output].Columns[F14]"
+                      name="F14" />
+                    <outputColumn
+                      refId="Package\Data Flow Task Crimen\Excel Source.Outputs[Excel Source Error Output].Columns[F15]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Data Flow Task Crimen\Excel Source.Outputs[Excel Source Error Output].Columns[F15]"
+                      name="F15" />
+                    <outputColumn
+                      refId="Package\Data Flow Task Crimen\Excel Source.Outputs[Excel Source Error Output].Columns[F16]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Data Flow Task Crimen\Excel Source.Outputs[Excel Source Error Output].Columns[F16]"
+                      name="F16" />
                     <outputColumn
                       refId="Package\Data Flow Task Crimen\Excel Source.Outputs[Excel Source Error Output].Columns[ErrorCode]"
                       dataType="i4"
@@ -823,6 +886,7 @@
       DTS:refId="Package\Data Flow Task Detalle"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Data Flow Task"
+      DTS:Disabled="True"
       DTS:DTSID="{3BB31E44-3E4D-485A-9534-BB372461A72F}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
@@ -1011,6 +1075,36 @@
                       lineageId="Package\Data Flow Task Detalle\Excel Source.Outputs[Excel Source Output].Columns[Periodo]"
                       name="Periodo"
                       truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task Detalle\Excel Source.Outputs[Excel Source Output].Columns[F14]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task Detalle\Excel Source.Outputs[Excel Source Output].ExternalColumns[F14]"
+                      length="255"
+                      lineageId="Package\Data Flow Task Detalle\Excel Source.Outputs[Excel Source Output].Columns[F14]"
+                      name="F14"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task Detalle\Excel Source.Outputs[Excel Source Output].Columns[F15]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task Detalle\Excel Source.Outputs[Excel Source Output].ExternalColumns[F15]"
+                      length="255"
+                      lineageId="Package\Data Flow Task Detalle\Excel Source.Outputs[Excel Source Output].Columns[F15]"
+                      name="F15"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task Detalle\Excel Source.Outputs[Excel Source Output].Columns[F16]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task Detalle\Excel Source.Outputs[Excel Source Output].ExternalColumns[F16]"
+                      length="255"
+                      lineageId="Package\Data Flow Task Detalle\Excel Source.Outputs[Excel Source Output].Columns[F16]"
+                      name="F16"
+                      truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -1074,6 +1168,21 @@
                       dataType="wstr"
                       length="255"
                       name="Periodo" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task Detalle\Excel Source.Outputs[Excel Source Output].ExternalColumns[F14]"
+                      dataType="wstr"
+                      length="255"
+                      name="F14" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task Detalle\Excel Source.Outputs[Excel Source Output].ExternalColumns[F15]"
+                      dataType="wstr"
+                      length="255"
+                      name="F15" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task Detalle\Excel Source.Outputs[Excel Source Output].ExternalColumns[F16]"
+                      dataType="wstr"
+                      length="255"
+                      name="F16" />
                   </externalMetadataColumns>
                 </output>
                 <output
@@ -1154,6 +1263,24 @@
                       length="255"
                       lineageId="Package\Data Flow Task Detalle\Excel Source.Outputs[Excel Source Error Output].Columns[Periodo]"
                       name="Periodo" />
+                    <outputColumn
+                      refId="Package\Data Flow Task Detalle\Excel Source.Outputs[Excel Source Error Output].Columns[F14]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Data Flow Task Detalle\Excel Source.Outputs[Excel Source Error Output].Columns[F14]"
+                      name="F14" />
+                    <outputColumn
+                      refId="Package\Data Flow Task Detalle\Excel Source.Outputs[Excel Source Error Output].Columns[F15]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Data Flow Task Detalle\Excel Source.Outputs[Excel Source Error Output].Columns[F15]"
+                      name="F15" />
+                    <outputColumn
+                      refId="Package\Data Flow Task Detalle\Excel Source.Outputs[Excel Source Error Output].Columns[F16]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Data Flow Task Detalle\Excel Source.Outputs[Excel Source Error Output].Columns[F16]"
+                      name="F16" />
                     <outputColumn
                       refId="Package\Data Flow Task Detalle\Excel Source.Outputs[Excel Source Error Output].Columns[ErrorCode]"
                       dataType="i4"
@@ -1437,6 +1564,15 @@
                       lineageId="Package\Data Flow Task Localidad\Excel Source.Outputs[Excel Source Output].Columns[ID]"
                       name="ID"
                       truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task Localidad\Excel Source.Outputs[Excel Source Output].Columns[Areakm2]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task Localidad\Excel Source.Outputs[Excel Source Output].ExternalColumns[Areakm2]"
+                      lineageId="Package\Data Flow Task Localidad\Excel Source.Outputs[Excel Source Output].Columns[Areakm2]"
+                      name="Areakm2"
+                      truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -1458,6 +1594,10 @@
                       refId="Package\Data Flow Task Localidad\Excel Source.Outputs[Excel Source Output].ExternalColumns[ID]"
                       dataType="r8"
                       name="ID" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task Localidad\Excel Source.Outputs[Excel Source Output].ExternalColumns[Areakm2]"
+                      dataType="r8"
+                      name="Areakm2" />
                   </externalMetadataColumns>
                 </output>
                 <output
@@ -1482,6 +1622,11 @@
                       dataType="r8"
                       lineageId="Package\Data Flow Task Localidad\Excel Source.Outputs[Excel Source Error Output].Columns[Población]"
                       name="Población" />
+                    <outputColumn
+                      refId="Package\Data Flow Task Localidad\Excel Source.Outputs[Excel Source Error Output].Columns[Areakm2]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Task Localidad\Excel Source.Outputs[Excel Source Error Output].Columns[Areakm2]"
+                      name="Areakm2" />
                     <outputColumn
                       refId="Package\Data Flow Task Localidad\Excel Source.Outputs[Excel Source Error Output].Columns[ID]"
                       dataType="r8"
@@ -1596,6 +1741,12 @@
                       cachedName="Población"
                       externalMetadataColumnId="Package\Data Flow Task Localidad\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Poblacion]"
                       lineageId="Package\Data Flow Task Localidad\Excel Source.Outputs[Excel Source Output].Columns[Población]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task Localidad\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Areakm2]"
+                      cachedDataType="r8"
+                      cachedName="Areakm2"
+                      externalMetadataColumnId="Package\Data Flow Task Localidad\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Superficie]"
+                      lineageId="Package\Data Flow Task Localidad\Excel Source.Outputs[Excel Source Output].Columns[Areakm2]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -1617,6 +1768,10 @@
                       refId="Package\Data Flow Task Localidad\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Poblacion]"
                       dataType="i4"
                       name="Poblacion" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task Localidad\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Superficie]"
+                      dataType="r8"
+                      name="Superficie" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -1668,23 +1823,30 @@
     design-time-name="Package">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="212,42"
           Id="Package\Data Flow Task Clasificacion"
-          TopLeft="101,79" />
+          TopLeft="135,79" />
         <NodeLayout
           Size="188,42"
           Id="Package\Data Flow Task Crimen"
-          TopLeft="614,87" />
+          TopLeft="648,87" />
         <NodeLayout
           Size="187,42"
           Id="Package\Data Flow Task Detalle"
-          TopLeft="880,83" />
+          TopLeft="914,83" />
         <NodeLayout
           Size="199,42"
           Id="Package\Data Flow Task Localidad"
-          TopLeft="362,82" />
+          TopLeft="395,80" />
+        <AnnotationLayout
+          Text="NOTAS:&#xD;&#xA;- Deben hacerse primero Clasificación y Localidad, pues Crimen los usa. Después, Crimen debe hacerse de manera independiente, y solo entonces Detalles (depende de datos que estarán de crimen)&#xD;&#xA;- Localidad a veces da un error en la columna Provincia, esto en realidad no afecta y se ejecuta bien"
+          ParentId="Package"
+          FontInfo="{assembly:Null}"
+          Size="1073,72"
+          Id="f8b8c42b-1b02-4de9-929d-009455ee8d25"
+          TopLeft="103,174" />
       </GraphLayout>
     </LayoutInfo>
   </Package>

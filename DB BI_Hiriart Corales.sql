@@ -10,7 +10,8 @@ CREATE TABLE Localidad(
 LocalidadID INT PRIMARY KEY IDENTITY(1, 1) NOT NULL,
 Canton NVARCHAR(100) NOT NULL,
 Provincia NVARCHAR(100) NOT NULL,
-Poblacion INT NOT NULL
+Poblacion INT NOT NULL,
+Superficie FLOAT NOT NULL
 );
 
 CREATE TABLE Clasificacion(
