@@ -11,8 +11,8 @@
   DTS:LocaleID="12298"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="3"
-  DTS:VersionGUID="{B83EB181-430A-4E8C-91C8-D3A6D8B8445B}">
+  DTS:VersionBuild="8"
+  DTS:VersionGUID="{7CDB5FD3-A38B-43C0-89BC-5D84812DC5CA}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -47,6 +47,7 @@
       DTS:refId="Package\Data Flow Task Clasificacion"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Data Flow Task"
+      DTS:Disabled="True"
       DTS:DTSID="{FE9EAAF1-32F2-4F1B-A5C5-0414D79681B7}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
@@ -354,7 +355,7 @@
                 <property
                   dataType="System.String"
                   description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset">[dbo].[Clasificacion_dim]</property>
+                  name="OpenRowset">[dbo].[Crimenes_fact]</property>
                 <property
                   dataType="System.String"
                   description="Specifies the variable that contains the name of the database object used to open a rowset."
@@ -411,18 +412,35 @@
                   name="OLE DB Destination Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Data Flow Task Crimenes_fact\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[ClasificacionID]"
+                      refId="Package\Data Flow Task Crimenes_fact\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Afectados]"
                       cachedDataType="i4"
-                      cachedName="ClasificacionID"
-                      externalMetadataColumnId="Package\Data Flow Task Crimenes_fact\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ClasificacionID]"
-                      lineageId="Package\Data Flow Task Crimenes_fact\OLE DB Source.Outputs[OLE DB Source Output].Columns[ClasificacionID]" />
+                      cachedName="Afectados"
+                      externalMetadataColumnId="Package\Data Flow Task Crimenes_fact\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Afectados]"
+                      lineageId="Package\Data Flow Task Crimenes_fact\OLE DB Source.Outputs[OLE DB Source Output].Columns[Afectados]" />
                     <inputColumn
-                      refId="Package\Data Flow Task Crimenes_fact\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Nombre]"
-                      cachedDataType="wstr"
-                      cachedLength="100"
-                      cachedName="Nombre"
-                      externalMetadataColumnId="Package\Data Flow Task Crimenes_fact\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Nombre]"
-                      lineageId="Package\Data Flow Task Crimenes_fact\OLE DB Source.Outputs[OLE DB Source Output].Columns[Nombre]" />
+                      refId="Package\Data Flow Task Crimenes_fact\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Localidad_key]"
+                      cachedDataType="i4"
+                      cachedName="Localidad_key"
+                      externalMetadataColumnId="Package\Data Flow Task Crimenes_fact\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Localidad_key]"
+                      lineageId="Package\Data Flow Task Crimenes_fact\OLE DB Source.Outputs[OLE DB Source Output].Columns[Localidad_key]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task Crimenes_fact\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Detalles_key]"
+                      cachedDataType="i4"
+                      cachedName="Detalles_key"
+                      externalMetadataColumnId="Package\Data Flow Task Crimenes_fact\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Detalles_key]"
+                      lineageId="Package\Data Flow Task Crimenes_fact\OLE DB Source.Outputs[OLE DB Source Output].Columns[Detalles_key]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task Crimenes_fact\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Tiempo_key]"
+                      cachedDataType="i4"
+                      cachedName="Tiempo_key"
+                      externalMetadataColumnId="Package\Data Flow Task Crimenes_fact\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Tiempo_key]"
+                      lineageId="Package\Data Flow Task Crimenes_fact\OLE DB Source.Outputs[OLE DB Source Output].Columns[Tiempo_key]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task Crimenes_fact\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Clasificacion_key]"
+                      cachedDataType="i4"
+                      cachedName="Clasificacion_key"
+                      externalMetadataColumnId="Package\Data Flow Task Crimenes_fact\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Clasificacion_key]"
+                      lineageId="Package\Data Flow Task Crimenes_fact\OLE DB Source.Outputs[OLE DB Source Output].Columns[Clasificacion_key]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -431,14 +449,21 @@
                       dataType="i4"
                       name="Clasificacion_key" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task Crimenes_fact\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ClasificacionID]"
+                      refId="Package\Data Flow Task Crimenes_fact\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Afectados]"
                       dataType="i4"
-                      name="ClasificacionID" />
+                      name="Afectados" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task Crimenes_fact\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Nombre]"
-                      dataType="wstr"
-                      length="100"
-                      name="Nombre" />
+                      refId="Package\Data Flow Task Crimenes_fact\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Localidad_key]"
+                      dataType="i4"
+                      name="Localidad_key" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task Crimenes_fact\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Detalles_key]"
+                      dataType="i4"
+                      name="Detalles_key" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task Crimenes_fact\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Tiempo_key]"
+                      dataType="i4"
+                      name="Tiempo_key" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -492,7 +517,14 @@
                   dataType="System.String"
                   description="The SQL command to be executed."
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT Crm.CrimenID, Crm.Afectados, 
+Clsf.Clasificacion_key, Lcd.Localidad_key, Dtld.Detalles_key, Tmp.Tiempo_key
+FROM Crimen Crm
+INNER JOIN [EstadSeguridadHC_DM].[dbo].[Localidad_dim] Lcd ON Lcd.LocalidadID = Crm.LocalidadID
+INNER JOIN [EstadSeguridadHC_DM].[dbo].[Clasificacion_dim] Clsf ON Clsf.ClasificacionID = Crm.ClasificacionID
+INNER JOIN [EstadSeguridadHC_DM].[dbo].[Tiempo_dim] Tmp ON Tmp.Periodo = Crm.Periodo
+INNER JOIN [EstadSeguridadHC_DM].[dbo].[Detalles_dim] Dtld ON Dtld.EdadVictima = (SELECT EdadVictima FROM DetalleCrimen Dtl WHERE Dtl.CrimenID = Crm.CrimenID) 
+AND SexoPerpetuador = (SELECT SexoPerpetuador FROM DetalleCrimen Dtl WHERE Dtl.CrimenID = Crm.CrimenID) AND TipoArma = (SELECT TipoArma FROM DetalleCrimen Dtl WHERE Dtl.CrimenID = Crm.CrimenID)</property>
                 <property
                   dataType="System.String"
                   description="The variable that contains the SQL command to be executed."
@@ -509,7 +541,7 @@
                   dataType="System.Int32"
                   description="Specifies the mode used to access the database."
                   name="AccessMode"
-                  typeConverter="AccessMode">0</property>
+                  typeConverter="AccessMode">2</property>
                 <property
                   dataType="System.String"
                   description="The mappings between the parameters in the SQL command and variables."
@@ -529,36 +561,86 @@
                   name="OLE DB Source Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Data Flow Task Crimenes_fact\OLE DB Source.Outputs[OLE DB Source Output].Columns[ClasificacionID]"
+                      refId="Package\Data Flow Task Crimenes_fact\OLE DB Source.Outputs[OLE DB Source Output].Columns[CrimenID]"
                       dataType="i4"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task Crimenes_fact\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[ClasificacionID]"
-                      lineageId="Package\Data Flow Task Crimenes_fact\OLE DB Source.Outputs[OLE DB Source Output].Columns[ClasificacionID]"
-                      name="ClasificacionID"
+                      externalMetadataColumnId="Package\Data Flow Task Crimenes_fact\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[CrimenID]"
+                      lineageId="Package\Data Flow Task Crimenes_fact\OLE DB Source.Outputs[OLE DB Source Output].Columns[CrimenID]"
+                      name="CrimenID"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Data Flow Task Crimenes_fact\OLE DB Source.Outputs[OLE DB Source Output].Columns[Nombre]"
-                      dataType="wstr"
+                      refId="Package\Data Flow Task Crimenes_fact\OLE DB Source.Outputs[OLE DB Source Output].Columns[Afectados]"
+                      dataType="i4"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task Crimenes_fact\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Nombre]"
-                      length="100"
-                      lineageId="Package\Data Flow Task Crimenes_fact\OLE DB Source.Outputs[OLE DB Source Output].Columns[Nombre]"
-                      name="Nombre"
+                      externalMetadataColumnId="Package\Data Flow Task Crimenes_fact\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Afectados]"
+                      lineageId="Package\Data Flow Task Crimenes_fact\OLE DB Source.Outputs[OLE DB Source Output].Columns[Afectados]"
+                      name="Afectados"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task Crimenes_fact\OLE DB Source.Outputs[OLE DB Source Output].Columns[Clasificacion_key]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task Crimenes_fact\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Clasificacion_key]"
+                      lineageId="Package\Data Flow Task Crimenes_fact\OLE DB Source.Outputs[OLE DB Source Output].Columns[Clasificacion_key]"
+                      name="Clasificacion_key"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task Crimenes_fact\OLE DB Source.Outputs[OLE DB Source Output].Columns[Localidad_key]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task Crimenes_fact\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Localidad_key]"
+                      lineageId="Package\Data Flow Task Crimenes_fact\OLE DB Source.Outputs[OLE DB Source Output].Columns[Localidad_key]"
+                      name="Localidad_key"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task Crimenes_fact\OLE DB Source.Outputs[OLE DB Source Output].Columns[Detalles_key]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task Crimenes_fact\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Detalles_key]"
+                      lineageId="Package\Data Flow Task Crimenes_fact\OLE DB Source.Outputs[OLE DB Source Output].Columns[Detalles_key]"
+                      name="Detalles_key"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task Crimenes_fact\OLE DB Source.Outputs[OLE DB Source Output].Columns[Tiempo_key]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task Crimenes_fact\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Tiempo_key]"
+                      lineageId="Package\Data Flow Task Crimenes_fact\OLE DB Source.Outputs[OLE DB Source Output].Columns[Tiempo_key]"
+                      name="Tiempo_key"
                       truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task Crimenes_fact\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[ClasificacionID]"
+                      refId="Package\Data Flow Task Crimenes_fact\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[CrimenID]"
                       dataType="i4"
-                      name="ClasificacionID" />
+                      name="CrimenID" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task Crimenes_fact\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Nombre]"
-                      dataType="wstr"
-                      length="100"
-                      name="Nombre" />
+                      refId="Package\Data Flow Task Crimenes_fact\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Afectados]"
+                      dataType="i4"
+                      name="Afectados" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task Crimenes_fact\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Clasificacion_key]"
+                      dataType="i4"
+                      name="Clasificacion_key" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task Crimenes_fact\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Localidad_key]"
+                      dataType="i4"
+                      name="Localidad_key" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task Crimenes_fact\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Detalles_key]"
+                      dataType="i4"
+                      name="Detalles_key" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task Crimenes_fact\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Tiempo_key]"
+                      dataType="i4"
+                      name="Tiempo_key" />
                   </externalMetadataColumns>
                 </output>
                 <output
@@ -567,16 +649,35 @@
                   name="OLE DB Source Error Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Data Flow Task Crimenes_fact\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ClasificacionID]"
+                      refId="Package\Data Flow Task Crimenes_fact\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[CrimenID]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task Crimenes_fact\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ClasificacionID]"
-                      name="ClasificacionID" />
+                      lineageId="Package\Data Flow Task Crimenes_fact\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[CrimenID]"
+                      name="CrimenID" />
                     <outputColumn
-                      refId="Package\Data Flow Task Crimenes_fact\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Nombre]"
-                      dataType="wstr"
-                      length="100"
-                      lineageId="Package\Data Flow Task Crimenes_fact\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Nombre]"
-                      name="Nombre" />
+                      refId="Package\Data Flow Task Crimenes_fact\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Afectados]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task Crimenes_fact\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Afectados]"
+                      name="Afectados" />
+                    <outputColumn
+                      refId="Package\Data Flow Task Crimenes_fact\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Clasificacion_key]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task Crimenes_fact\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Clasificacion_key]"
+                      name="Clasificacion_key" />
+                    <outputColumn
+                      refId="Package\Data Flow Task Crimenes_fact\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Localidad_key]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task Crimenes_fact\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Localidad_key]"
+                      name="Localidad_key" />
+                    <outputColumn
+                      refId="Package\Data Flow Task Crimenes_fact\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Detalles_key]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task Crimenes_fact\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Detalles_key]"
+                      name="Detalles_key" />
+                    <outputColumn
+                      refId="Package\Data Flow Task Crimenes_fact\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Tiempo_key]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task Crimenes_fact\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Tiempo_key]"
+                      name="Tiempo_key" />
                     <outputColumn
                       refId="Package\Data Flow Task Crimenes_fact\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
                       dataType="i4"
@@ -609,6 +710,7 @@
       DTS:refId="Package\Data Flow Task Detalles"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Data Flow Task"
+      DTS:Disabled="True"
       DTS:DTSID="{e4aaa9a6-111f-4e58-a645-5012df705259}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
@@ -635,7 +737,7 @@
                 <property
                   dataType="System.String"
                   description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset">[dbo].[Clasificacion_dim]</property>
+                  name="OpenRowset">[dbo].[Detalles_dim]</property>
                 <property
                   dataType="System.String"
                   description="Specifies the variable that contains the name of the database object used to open a rowset."
@@ -692,34 +794,48 @@
                   name="OLE DB Destination Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Data Flow Task Detalles\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[ClasificacionID]"
-                      cachedDataType="i4"
-                      cachedName="ClasificacionID"
-                      externalMetadataColumnId="Package\Data Flow Task Detalles\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ClasificacionID]"
-                      lineageId="Package\Data Flow Task Detalles\OLE DB Source.Outputs[OLE DB Source Output].Columns[ClasificacionID]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task Detalles\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Nombre]"
+                      refId="Package\Data Flow Task Detalles\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[EdadVictima]"
                       cachedDataType="wstr"
                       cachedLength="100"
-                      cachedName="Nombre"
-                      externalMetadataColumnId="Package\Data Flow Task Detalles\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Nombre]"
-                      lineageId="Package\Data Flow Task Detalles\OLE DB Source.Outputs[OLE DB Source Output].Columns[Nombre]" />
+                      cachedName="EdadVictima"
+                      externalMetadataColumnId="Package\Data Flow Task Detalles\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[EdadVictima]"
+                      lineageId="Package\Data Flow Task Detalles\OLE DB Source.Outputs[OLE DB Source Output].Columns[EdadVictima]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task Detalles\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[TipoArma]"
+                      cachedDataType="wstr"
+                      cachedLength="100"
+                      cachedName="TipoArma"
+                      externalMetadataColumnId="Package\Data Flow Task Detalles\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[TipoArma]"
+                      lineageId="Package\Data Flow Task Detalles\OLE DB Source.Outputs[OLE DB Source Output].Columns[TipoArma]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task Detalles\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[SexoPerpetuador]"
+                      cachedDataType="wstr"
+                      cachedLength="100"
+                      cachedName="SexoPerpetuador"
+                      externalMetadataColumnId="Package\Data Flow Task Detalles\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SexoPerpetuador]"
+                      lineageId="Package\Data Flow Task Detalles\OLE DB Source.Outputs[OLE DB Source Output].Columns[SexoPerpetuador]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task Detalles\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Clasificacion_key]"
+                      refId="Package\Data Flow Task Detalles\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Detalles_key]"
                       dataType="i4"
-                      name="Clasificacion_key" />
+                      name="Detalles_key" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task Detalles\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ClasificacionID]"
-                      dataType="i4"
-                      name="ClasificacionID" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task Detalles\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Nombre]"
+                      refId="Package\Data Flow Task Detalles\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[EdadVictima]"
                       dataType="wstr"
                       length="100"
-                      name="Nombre" />
+                      name="EdadVictima" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task Detalles\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[TipoArma]"
+                      dataType="wstr"
+                      length="100"
+                      name="TipoArma" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task Detalles\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SexoPerpetuador]"
+                      dataType="wstr"
+                      length="100"
+                      name="SexoPerpetuador" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -773,7 +889,7 @@
                   dataType="System.String"
                   description="The SQL command to be executed."
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT DISTINCT EdadVictima, SexoPerpetuador, TipoArma FROM DetalleCrimen</property>
                 <property
                   dataType="System.String"
                   description="The variable that contains the SQL command to be executed."
@@ -790,7 +906,7 @@
                   dataType="System.Int32"
                   description="Specifies the mode used to access the database."
                   name="AccessMode"
-                  typeConverter="AccessMode">0</property>
+                  typeConverter="AccessMode">2</property>
                 <property
                   dataType="System.String"
                   description="The mappings between the parameters in the SQL command and variables."
@@ -810,36 +926,53 @@
                   name="OLE DB Source Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Data Flow Task Detalles\OLE DB Source.Outputs[OLE DB Source Output].Columns[ClasificacionID]"
-                      dataType="i4"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task Detalles\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[ClasificacionID]"
-                      lineageId="Package\Data Flow Task Detalles\OLE DB Source.Outputs[OLE DB Source Output].Columns[ClasificacionID]"
-                      name="ClasificacionID"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Data Flow Task Detalles\OLE DB Source.Outputs[OLE DB Source Output].Columns[Nombre]"
+                      refId="Package\Data Flow Task Detalles\OLE DB Source.Outputs[OLE DB Source Output].Columns[EdadVictima]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task Detalles\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Nombre]"
+                      externalMetadataColumnId="Package\Data Flow Task Detalles\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[EdadVictima]"
                       length="100"
-                      lineageId="Package\Data Flow Task Detalles\OLE DB Source.Outputs[OLE DB Source Output].Columns[Nombre]"
-                      name="Nombre"
+                      lineageId="Package\Data Flow Task Detalles\OLE DB Source.Outputs[OLE DB Source Output].Columns[EdadVictima]"
+                      name="EdadVictima"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task Detalles\OLE DB Source.Outputs[OLE DB Source Output].Columns[TipoArma]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task Detalles\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[TipoArma]"
+                      length="100"
+                      lineageId="Package\Data Flow Task Detalles\OLE DB Source.Outputs[OLE DB Source Output].Columns[TipoArma]"
+                      name="TipoArma"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task Detalles\OLE DB Source.Outputs[OLE DB Source Output].Columns[SexoPerpetuador]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task Detalles\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[SexoPerpetuador]"
+                      length="100"
+                      lineageId="Package\Data Flow Task Detalles\OLE DB Source.Outputs[OLE DB Source Output].Columns[SexoPerpetuador]"
+                      name="SexoPerpetuador"
                       truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task Detalles\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[ClasificacionID]"
-                      dataType="i4"
-                      name="ClasificacionID" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task Detalles\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Nombre]"
+                      refId="Package\Data Flow Task Detalles\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[EdadVictima]"
                       dataType="wstr"
                       length="100"
-                      name="Nombre" />
+                      name="EdadVictima" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task Detalles\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[TipoArma]"
+                      dataType="wstr"
+                      length="100"
+                      name="TipoArma" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task Detalles\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[SexoPerpetuador]"
+                      dataType="wstr"
+                      length="100"
+                      name="SexoPerpetuador" />
                   </externalMetadataColumns>
                 </output>
                 <output
@@ -848,16 +981,23 @@
                   name="OLE DB Source Error Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Data Flow Task Detalles\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ClasificacionID]"
-                      dataType="i4"
-                      lineageId="Package\Data Flow Task Detalles\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ClasificacionID]"
-                      name="ClasificacionID" />
-                    <outputColumn
-                      refId="Package\Data Flow Task Detalles\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Nombre]"
+                      refId="Package\Data Flow Task Detalles\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[EdadVictima]"
                       dataType="wstr"
                       length="100"
-                      lineageId="Package\Data Flow Task Detalles\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Nombre]"
-                      name="Nombre" />
+                      lineageId="Package\Data Flow Task Detalles\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[EdadVictima]"
+                      name="EdadVictima" />
+                    <outputColumn
+                      refId="Package\Data Flow Task Detalles\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[SexoPerpetuador]"
+                      dataType="wstr"
+                      length="100"
+                      lineageId="Package\Data Flow Task Detalles\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[SexoPerpetuador]"
+                      name="SexoPerpetuador" />
+                    <outputColumn
+                      refId="Package\Data Flow Task Detalles\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[TipoArma]"
+                      dataType="wstr"
+                      length="100"
+                      lineageId="Package\Data Flow Task Detalles\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[TipoArma]"
+                      name="TipoArma" />
                     <outputColumn
                       refId="Package\Data Flow Task Detalles\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
                       dataType="i4"
@@ -890,6 +1030,7 @@
       DTS:refId="Package\Data Flow Task Localidad"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Data Flow Task"
+      DTS:Disabled="True"
       DTS:DTSID="{8093e658-4b85-4190-92ea-22216aaa8d21}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
@@ -1260,6 +1401,7 @@
       DTS:refId="Package\Data Flow Task Tiempo"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Data Flow Task"
+      DTS:Disabled="True"
       DTS:DTSID="{c13ce05d-0b20-4a83-9c51-1a10b8a32aad}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
@@ -1286,7 +1428,7 @@
                 <property
                   dataType="System.String"
                   description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset">[dbo].[Clasificacion_dim]</property>
+                  name="OpenRowset">[dbo].[Tiempo_dim]</property>
                 <property
                   dataType="System.String"
                   description="Specifies the variable that contains the name of the database object used to open a rowset."
@@ -1343,34 +1485,64 @@
                   name="OLE DB Destination Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Data Flow Task Tiempo\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[ClasificacionID]"
-                      cachedDataType="i4"
-                      cachedName="ClasificacionID"
-                      externalMetadataColumnId="Package\Data Flow Task Tiempo\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ClasificacionID]"
-                      lineageId="Package\Data Flow Task Tiempo\OLE DB Source.Outputs[OLE DB Source Output].Columns[ClasificacionID]" />
+                      refId="Package\Data Flow Task Tiempo\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Periodo]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="Periodo"
+                      externalMetadataColumnId="Package\Data Flow Task Tiempo\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Periodo]"
+                      lineageId="Package\Data Flow Task Tiempo\OLE DB Source.Outputs[OLE DB Source Output].Columns[Periodo]" />
                     <inputColumn
-                      refId="Package\Data Flow Task Tiempo\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Nombre]"
+                      refId="Package\Data Flow Task Tiempo\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Mes]"
+                      cachedDataType="i4"
+                      cachedName="Mes"
+                      externalMetadataColumnId="Package\Data Flow Task Tiempo\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Mes]"
+                      lineageId="Package\Data Flow Task Tiempo\OLE DB Source.Outputs[OLE DB Source Output].Columns[Mes]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task Tiempo\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Anio]"
+                      cachedDataType="i4"
+                      cachedName="Anio"
+                      externalMetadataColumnId="Package\Data Flow Task Tiempo\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Anio]"
+                      lineageId="Package\Data Flow Task Tiempo\OLE DB Source.Outputs[OLE DB Source Output].Columns[Anio]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task Tiempo\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Trimestre]"
+                      cachedDataType="i4"
+                      cachedName="Trimestre"
+                      externalMetadataColumnId="Package\Data Flow Task Tiempo\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Trimestre]"
+                      lineageId="Package\Data Flow Task Tiempo\OLE DB Source.Outputs[OLE DB Source Output].Columns[Trimestre]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task Tiempo\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[MesAnio]"
                       cachedDataType="wstr"
-                      cachedLength="100"
-                      cachedName="Nombre"
-                      externalMetadataColumnId="Package\Data Flow Task Tiempo\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Nombre]"
-                      lineageId="Package\Data Flow Task Tiempo\OLE DB Source.Outputs[OLE DB Source Output].Columns[Nombre]" />
+                      cachedLength="30"
+                      cachedName="MesAnio"
+                      externalMetadataColumnId="Package\Data Flow Task Tiempo\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[MesAnio]"
+                      lineageId="Package\Data Flow Task Tiempo\OLE DB Source.Outputs[OLE DB Source Output].Columns[MesAnio]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task Tiempo\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Clasificacion_key]"
+                      refId="Package\Data Flow Task Tiempo\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Tiempo_key]"
                       dataType="i4"
-                      name="Clasificacion_key" />
+                      name="Tiempo_key" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task Tiempo\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ClasificacionID]"
+                      refId="Package\Data Flow Task Tiempo\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Periodo]"
+                      dataType="dbTimeStamp"
+                      name="Periodo" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task Tiempo\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Mes]"
                       dataType="i4"
-                      name="ClasificacionID" />
+                      name="Mes" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task Tiempo\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Nombre]"
+                      refId="Package\Data Flow Task Tiempo\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Anio]"
+                      dataType="i4"
+                      name="Anio" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task Tiempo\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Trimestre]"
+                      dataType="i4"
+                      name="Trimestre" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task Tiempo\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[MesAnio]"
                       dataType="wstr"
                       length="100"
-                      name="Nombre" />
+                      name="MesAnio" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -1415,7 +1587,7 @@
                 <property
                   dataType="System.String"
                   description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset">[dbo].[Clasificacion]</property>
+                  name="OpenRowset">[dbo].[Crimen]</property>
                 <property
                   dataType="System.String"
                   description="Specifies the variable that contains the name of the database object used to open a rowset."
@@ -1424,7 +1596,8 @@
                   dataType="System.String"
                   description="The SQL command to be executed."
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT DISTINCT Periodo, Mes=DATEPART(MM, Periodo), Anio=DATEPART(YYYY, Periodo), Trimestre=DATEPART(QUARTER, Periodo), 
+SemanaMes=DATEPART(DAY, DATEDIFF(DAY, 0, Periodo)/7 * 7)/7 + 1, MesAnio=DATENAME(MONTH, Periodo) FROM Crimen</property>
                 <property
                   dataType="System.String"
                   description="The variable that contains the SQL command to be executed."
@@ -1441,7 +1614,7 @@
                   dataType="System.Int32"
                   description="Specifies the mode used to access the database."
                   name="AccessMode"
-                  typeConverter="AccessMode">0</property>
+                  typeConverter="AccessMode">2</property>
                 <property
                   dataType="System.String"
                   description="The mappings between the parameters in the SQL command and variables."
@@ -1461,36 +1634,88 @@
                   name="OLE DB Source Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Data Flow Task Tiempo\OLE DB Source.Outputs[OLE DB Source Output].Columns[ClasificacionID]"
+                      refId="Package\Data Flow Task Tiempo\OLE DB Source.Outputs[OLE DB Source Output].Columns[Periodo]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task Tiempo\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Periodo]"
+                      lineageId="Package\Data Flow Task Tiempo\OLE DB Source.Outputs[OLE DB Source Output].Columns[Periodo]"
+                      name="Periodo"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task Tiempo\OLE DB Source.Outputs[OLE DB Source Output].Columns[Mes]"
                       dataType="i4"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task Tiempo\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[ClasificacionID]"
-                      lineageId="Package\Data Flow Task Tiempo\OLE DB Source.Outputs[OLE DB Source Output].Columns[ClasificacionID]"
-                      name="ClasificacionID"
+                      externalMetadataColumnId="Package\Data Flow Task Tiempo\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Mes]"
+                      lineageId="Package\Data Flow Task Tiempo\OLE DB Source.Outputs[OLE DB Source Output].Columns[Mes]"
+                      name="Mes"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Data Flow Task Tiempo\OLE DB Source.Outputs[OLE DB Source Output].Columns[Nombre]"
+                      refId="Package\Data Flow Task Tiempo\OLE DB Source.Outputs[OLE DB Source Output].Columns[Anio]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task Tiempo\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Anio]"
+                      lineageId="Package\Data Flow Task Tiempo\OLE DB Source.Outputs[OLE DB Source Output].Columns[Anio]"
+                      name="Anio"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task Tiempo\OLE DB Source.Outputs[OLE DB Source Output].Columns[Trimestre]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task Tiempo\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Trimestre]"
+                      lineageId="Package\Data Flow Task Tiempo\OLE DB Source.Outputs[OLE DB Source Output].Columns[Trimestre]"
+                      name="Trimestre"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task Tiempo\OLE DB Source.Outputs[OLE DB Source Output].Columns[SemanaMes]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task Tiempo\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[SemanaMes]"
+                      lineageId="Package\Data Flow Task Tiempo\OLE DB Source.Outputs[OLE DB Source Output].Columns[SemanaMes]"
+                      name="SemanaMes"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task Tiempo\OLE DB Source.Outputs[OLE DB Source Output].Columns[MesAnio]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task Tiempo\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Nombre]"
-                      length="100"
-                      lineageId="Package\Data Flow Task Tiempo\OLE DB Source.Outputs[OLE DB Source Output].Columns[Nombre]"
-                      name="Nombre"
+                      externalMetadataColumnId="Package\Data Flow Task Tiempo\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[MesAnio]"
+                      length="30"
+                      lineageId="Package\Data Flow Task Tiempo\OLE DB Source.Outputs[OLE DB Source Output].Columns[MesAnio]"
+                      name="MesAnio"
                       truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task Tiempo\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[ClasificacionID]"
-                      dataType="i4"
-                      name="ClasificacionID" />
+                      refId="Package\Data Flow Task Tiempo\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Periodo]"
+                      dataType="dbTimeStamp"
+                      name="Periodo" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task Tiempo\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Nombre]"
+                      refId="Package\Data Flow Task Tiempo\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Mes]"
+                      dataType="i4"
+                      name="Mes" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task Tiempo\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Anio]"
+                      dataType="i4"
+                      name="Anio" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task Tiempo\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Trimestre]"
+                      dataType="i4"
+                      name="Trimestre" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task Tiempo\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[SemanaMes]"
+                      dataType="i4"
+                      name="SemanaMes" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task Tiempo\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[MesAnio]"
                       dataType="wstr"
-                      length="100"
-                      name="Nombre" />
+                      length="30"
+                      name="MesAnio" />
                   </externalMetadataColumns>
                 </output>
                 <output
@@ -1499,16 +1724,36 @@
                   name="OLE DB Source Error Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Data Flow Task Tiempo\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ClasificacionID]"
-                      dataType="i4"
-                      lineageId="Package\Data Flow Task Tiempo\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ClasificacionID]"
-                      name="ClasificacionID" />
+                      refId="Package\Data Flow Task Tiempo\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Periodo]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Data Flow Task Tiempo\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Periodo]"
+                      name="Periodo" />
                     <outputColumn
-                      refId="Package\Data Flow Task Tiempo\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Nombre]"
+                      refId="Package\Data Flow Task Tiempo\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Mes]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task Tiempo\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Mes]"
+                      name="Mes" />
+                    <outputColumn
+                      refId="Package\Data Flow Task Tiempo\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Anio]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task Tiempo\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Anio]"
+                      name="Anio" />
+                    <outputColumn
+                      refId="Package\Data Flow Task Tiempo\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Trimestre]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task Tiempo\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Trimestre]"
+                      name="Trimestre" />
+                    <outputColumn
+                      refId="Package\Data Flow Task Tiempo\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[SemanaMes]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task Tiempo\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[SemanaMes]"
+                      name="SemanaMes" />
+                    <outputColumn
+                      refId="Package\Data Flow Task Tiempo\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[MesAnio]"
                       dataType="wstr"
-                      length="100"
-                      lineageId="Package\Data Flow Task Tiempo\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Nombre]"
-                      name="Nombre" />
+                      length="30"
+                      lineageId="Package\Data Flow Task Tiempo\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[MesAnio]"
+                      name="MesAnio" />
                     <outputColumn
                       refId="Package\Data Flow Task Tiempo\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
                       dataType="i4"
@@ -1589,6 +1834,14 @@
           Id="Package\Data Flow Task Clasificacion"
           TopLeft="90,66" />
         <NodeLayout
+          Size="222,42"
+          Id="Package\Data Flow Task Crimenes_fact"
+          TopLeft="499,310" />
+        <NodeLayout
+          Size="192,42"
+          Id="Package\Data Flow Task Detalles"
+          TopLeft="996,62" />
+        <NodeLayout
           Size="199,42"
           Id="Package\Data Flow Task Localidad"
           TopLeft="417,67" />
@@ -1596,14 +1849,6 @@
           Size="190,42"
           Id="Package\Data Flow Task Tiempo"
           TopLeft="723,72" />
-        <NodeLayout
-          Size="192,42"
-          Id="Package\Data Flow Task Detalles"
-          TopLeft="996,62" />
-        <NodeLayout
-          Size="222,42"
-          Id="Package\Data Flow Task Crimenes_fact"
-          TopLeft="499,310" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
           TopLeft="196,108">
@@ -1794,19 +2039,6 @@
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task Clasificacion\OLE DB Source">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
     design-time-name="Package\Data Flow Task Clasificacion\OLE DB Destination">
     <Properties>
       <Property>
@@ -1819,19 +2051,174 @@
       </Property>
     </Properties>
   </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task Clasificacion\OLE DB Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\Data Flow Task Crimenes_fact">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="150,42"
+          Id="Package\Data Flow Task Crimenes_fact\OLE DB Source"
+          TopLeft="151,105" />
+        <NodeLayout
+          Size="171,42"
+          Id="Package\Data Flow Task Crimenes_fact\OLE DB Destination"
+          TopLeft="360,300" />
+        <EdgeLayout
+          Id="Package\Data Flow Task Crimenes_fact.Paths[OLE DB Source Output]"
+          TopLeft="226,147">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="219.5,153"
+              Start="0,0"
+              End="219.5,145.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,72.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,72.5"
+                    Point2="0,76.5"
+                    Point3="4,76.5" />
+                  <mssgle:LineSegment
+                    End="215.5,76.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="215.5,76.5"
+                    Point2="219.5,76.5"
+                    Point3="219.5,80.5" />
+                  <mssgle:LineSegment
+                    End="219.5,145.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task Crimenes_fact\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task Crimenes_fact\OLE DB Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\Data Flow Task Detalles">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="150,42"
+          Id="Package\Data Flow Task Detalles\OLE DB Source"
+          TopLeft="151,105" />
+        <NodeLayout
+          Size="171,42"
+          Id="Package\Data Flow Task Detalles\OLE DB Destination"
+          TopLeft="360,300" />
+        <EdgeLayout
+          Id="Package\Data Flow Task Detalles.Paths[OLE DB Source Output]"
+          TopLeft="226,147">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="219.5,153"
+              Start="0,0"
+              End="219.5,145.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,72.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,72.5"
+                    Point2="0,76.5"
+                    Point3="4,76.5" />
+                  <mssgle:LineSegment
+                    End="215.5,76.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="215.5,76.5"
+                    Point2="219.5,76.5"
+                    Point3="219.5,80.5" />
+                  <mssgle:LineSegment
+                    End="219.5,145.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task Detalles\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task Detalles\OLE DB Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <TaskHost
     design-time-name="Package\Data Flow Task Localidad">
     <LayoutInfo>
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="171,42"
-          Id="Package\Data Flow Task Localidad\OLE DB Destination"
-          TopLeft="360,300" />
-        <NodeLayout
           Size="150,42"
           Id="Package\Data Flow Task Localidad\OLE DB Source"
           TopLeft="151,105" />
+        <NodeLayout
+          Size="171,42"
+          Id="Package\Data Flow Task Localidad\OLE DB Destination"
+          TopLeft="360,300" />
         <EdgeLayout
           Id="Package\Data Flow Task Localidad.Paths[OLE DB Source Output]"
           TopLeft="226,147">
@@ -1901,13 +2288,13 @@
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="171,42"
-          Id="Package\Data Flow Task Tiempo\OLE DB Destination"
-          TopLeft="360,300" />
-        <NodeLayout
           Size="150,42"
           Id="Package\Data Flow Task Tiempo\OLE DB Source"
           TopLeft="151,105" />
+        <NodeLayout
+          Size="171,42"
+          Id="Package\Data Flow Task Tiempo\OLE DB Destination"
+          TopLeft="360,300" />
         <EdgeLayout
           Id="Package\Data Flow Task Tiempo.Paths[OLE DB Source Output]"
           TopLeft="226,147">
@@ -1945,109 +2332,31 @@
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
-  <TaskHost
-    design-time-name="Package\Data Flow Task Detalles">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
-        <NodeLayout
-          Size="171,42"
-          Id="Package\Data Flow Task Detalles\OLE DB Destination"
-          TopLeft="360,300" />
-        <NodeLayout
-          Size="150,42"
-          Id="Package\Data Flow Task Detalles\OLE DB Source"
-          TopLeft="151,105" />
-        <EdgeLayout
-          Id="Package\Data Flow Task Detalles.Paths[OLE DB Source Output]"
-          TopLeft="226,147">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="219.5,153"
-              Start="0,0"
-              End="219.5,145.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,72.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,72.5"
-                    Point2="0,76.5"
-                    Point3="4,76.5" />
-                  <mssgle:LineSegment
-                    End="215.5,76.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="215.5,76.5"
-                    Point2="219.5,76.5"
-                    Point3="219.5,80.5" />
-                  <mssgle:LineSegment
-                    End="219.5,145.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-      </GraphLayout>
-    </LayoutInfo>
-  </TaskHost>
-  <TaskHost
-    design-time-name="Package\Data Flow Task Crimenes_fact">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
-        <NodeLayout
-          Size="171,42"
-          Id="Package\Data Flow Task Crimenes_fact\OLE DB Destination"
-          TopLeft="360,300" />
-        <NodeLayout
-          Size="150,42"
-          Id="Package\Data Flow Task Crimenes_fact\OLE DB Source"
-          TopLeft="151,105" />
-        <EdgeLayout
-          Id="Package\Data Flow Task Crimenes_fact.Paths[OLE DB Source Output]"
-          TopLeft="226,147">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="219.5,153"
-              Start="0,0"
-              End="219.5,145.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,72.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,72.5"
-                    Point2="0,76.5"
-                    Point3="4,76.5" />
-                  <mssgle:LineSegment
-                    End="215.5,76.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="215.5,76.5"
-                    Point2="219.5,76.5"
-                    Point3="219.5,80.5" />
-                  <mssgle:LineSegment
-                    End="219.5,145.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-      </GraphLayout>
-    </LayoutInfo>
-  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task Tiempo\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task Tiempo\OLE DB Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
 </Objects>]]></DTS:DesignTimeProperties>
 </DTS:Executable>

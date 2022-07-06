@@ -1,0 +1,182 @@
+﻿<DataSourceView xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="88546179-0c60-4ca5-8177-348c00fa9a9e" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Estad Seguridad HC DM</ID>
+  <Name>Estad Seguridad HC DM</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:CurrentLayout</Name>
+      <Value>_ALL_TABLES_</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:SchemaRestriction</Name>
+      <Value></Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:RetrieveRelationships</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:Layouts</Name>
+      <Value>
+        <Layouts xmlns="">
+          <Diagram>
+            <Name>_ALL_TABLES_</Name>
+            <DiagramLayout />
+            <ShowRelationshipNames>False</ShowRelationshipNames>
+            <UseDiagramDefaultLayout>True</UseDiagramDefaultLayout>
+            <DiagramViewPortLeft>0</DiagramViewPortLeft>
+            <DiagramViewPortTop>0</DiagramViewPortTop>
+            <DiagramBoundingLeft>0</DiagramBoundingLeft>
+            <DiagramBoundingTop>0</DiagramBoundingTop>
+            <DiagramZoom>100</DiagramZoom>
+          </Diagram>
+        </Layouts>
+      </Value>
+    </Annotation>
+  </Annotations>
+  <DataSourceID>Estad Seguridad HC DM</DataSourceID>
+  <Schema>
+    <xs:schema id="Estad_x0020_Seguridad_x0020_HC_x0020_DM" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop">
+      <xs:element name="Estad_x0020_Seguridad_x0020_HC_x0020_DM" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:design-time-name="49f4d4ac-7591-4e72-8c47-51894feae5ca">
+        <xs:complexType>
+          <xs:choice minOccurs="0" maxOccurs="unbounded">
+            <xs:element name="dbo_Clasificacion_dim" msprop:design-time-name="d531b56d-063b-42c8-882e-7df9d6dbbb1e" msprop:DbTableName="Clasificacion_dim" msprop:FriendlyName="Clasificacion_dim" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="Clasificacion_key" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:design-time-name="1758ad08-357c-45f2-b292-104b0c9f6271" msprop:DbColumnName="Clasificacion_key" msprop:FriendlyName="Clasificacion_key" type="xs:int" />
+                  <xs:element name="ClasificacionID" msprop:design-time-name="4635a636-07d6-4b2a-b531-8189c5724a50" msprop:DbColumnName="ClasificacionID" msprop:FriendlyName="ClasificacionID" type="xs:int" />
+                  <xs:element name="Nombre" msprop:design-time-name="043bee8a-1d65-4cd7-b410-9d6292dc021c" msprop:DbColumnName="Nombre" msprop:FriendlyName="Nombre">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="100" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_Crimenes_fact" msprop:design-time-name="89094c7e-87f1-4eaa-a40f-299970dc6aa5" msprop:DbTableName="Crimenes_fact" msprop:FriendlyName="Crimenes_fact" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="Afectados" msprop:design-time-name="950aa00f-9bf4-4636-b976-fad78cfd8dfd" msprop:DbColumnName="Afectados" msprop:FriendlyName="Afectados" type="xs:int" />
+                  <xs:element name="Clasificacion_key" msprop:design-time-name="f933b9d8-1eca-4ff9-b088-faae9da82806" msprop:DbColumnName="Clasificacion_key" msprop:FriendlyName="Clasificacion_key" type="xs:int" />
+                  <xs:element name="Localidad_key" msprop:design-time-name="a5d88599-71d5-4a74-9791-d59919939644" msprop:DbColumnName="Localidad_key" msprop:FriendlyName="Localidad_key" type="xs:int" />
+                  <xs:element name="Detalles_key" msprop:design-time-name="fbf6e53b-cd7e-4f5e-9a18-1e9f39d8cdbd" msprop:DbColumnName="Detalles_key" msprop:FriendlyName="Detalles_key" type="xs:int" />
+                  <xs:element name="Tiempo_key" msprop:design-time-name="c216fe10-6a58-45b0-b350-f630bd59c3d3" msprop:DbColumnName="Tiempo_key" msprop:FriendlyName="Tiempo_key" type="xs:int" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_Detalles_dim" msprop:design-time-name="854b02d7-8c38-46b2-a3e7-f9ea0d60b225" msprop:DbTableName="Detalles_dim" msprop:FriendlyName="Detalles_dim" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="Detalles_key" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:design-time-name="b4922671-3344-41a0-b186-3a3dbb17cae8" msprop:DbColumnName="Detalles_key" msprop:FriendlyName="Detalles_key" type="xs:int" />
+                  <xs:element name="EdadVictima" msprop:design-time-name="8477c326-8466-4032-93eb-adbcbfba578c" msprop:DbColumnName="EdadVictima" msprop:FriendlyName="EdadVictima">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="100" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="SexoPerpetuador" msprop:design-time-name="b159e801-5db5-42f3-b93e-60742f413bab" msprop:DbColumnName="SexoPerpetuador" msprop:FriendlyName="SexoPerpetuador" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="100" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="TipoArma" msprop:design-time-name="dc398aaf-77fb-4d0f-93d7-eda453fb4fd5" msprop:DbColumnName="TipoArma" msprop:FriendlyName="TipoArma">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="100" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_Localidad_dim" msprop:design-time-name="6d583f23-7613-4173-b227-ba8c4a523ba3" msprop:DbTableName="Localidad_dim" msprop:FriendlyName="Localidad_dim" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="Localidad_key" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:design-time-name="af3bfa03-eb29-4c63-9a79-10d58d17378e" msprop:DbColumnName="Localidad_key" msprop:FriendlyName="Localidad_key" type="xs:int" />
+                  <xs:element name="LocalidadID" msprop:design-time-name="c07ef8fd-400c-485e-90a8-4266707fd4d2" msprop:DbColumnName="LocalidadID" msprop:FriendlyName="LocalidadID" type="xs:int" />
+                  <xs:element name="Canton" msprop:design-time-name="2b3f369e-db5d-447c-ae5d-ce9f5dbab12a" msprop:DbColumnName="Canton" msprop:FriendlyName="Canton">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="100" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Provincia" msprop:design-time-name="328f6a3d-1bb5-4f16-a6c3-e4e4f736667d" msprop:DbColumnName="Provincia" msprop:FriendlyName="Provincia">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="100" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Poblacion" msprop:design-time-name="b457b3e6-0048-4f6e-beca-6f1ba120bb43" msprop:DbColumnName="Poblacion" msprop:FriendlyName="Poblacion" type="xs:int" />
+                  <xs:element name="Superficie" msprop:design-time-name="c7fcd0ff-cf05-4661-a398-d343e5ea29e2" msprop:DbColumnName="Superficie" msprop:FriendlyName="Superficie" type="xs:double" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_Tiempo_dim" msprop:design-time-name="90a725fa-0b72-45f8-94fe-a8547ff2fc96" msprop:DbTableName="Tiempo_dim" msprop:FriendlyName="Tiempo_dim" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="Tiempo_key" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:design-time-name="4a5b3369-a302-4f64-9b33-6002191797c7" msprop:DbColumnName="Tiempo_key" msprop:FriendlyName="Tiempo_key" type="xs:int" />
+                  <xs:element name="Periodo" msprop:design-time-name="725660c1-5256-40e0-8adf-5dadf0b0b0f4" msprop:DbColumnName="Periodo" msprop:FriendlyName="Periodo" type="xs:dateTime" />
+                  <xs:element name="Mes" msprop:design-time-name="3ef5b827-9fc0-4616-9a1f-cd841b189d5d" msprop:DbColumnName="Mes" msprop:FriendlyName="Mes" type="xs:int" />
+                  <xs:element name="Anio" msprop:design-time-name="1464c345-0ec2-4cd8-b4a8-37385821466e" msprop:DbColumnName="Anio" msprop:FriendlyName="Anio" type="xs:int" />
+                  <xs:element name="Trimestre" msprop:design-time-name="5d5a3cc7-c113-47dd-98f9-ce02e7d6374c" msprop:DbColumnName="Trimestre" msprop:FriendlyName="Trimestre" type="xs:int" />
+                  <xs:element name="MesAnio" msprop:design-time-name="c763d06f-fdfd-40fe-8914-4347c5a099bb" msprop:DbColumnName="MesAnio" msprop:FriendlyName="MesAnio">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="100" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:choice>
+        </xs:complexType>
+        <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_Clasificacion_dim" />
+          <xs:field xpath="Clasificacion_key" />
+        </xs:unique>
+        <xs:unique name="dbo_Detalles_dim_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_Detalles_dim" />
+          <xs:field xpath="Detalles_key" />
+        </xs:unique>
+        <xs:unique name="dbo_Localidad_dim_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_Localidad_dim" />
+          <xs:field xpath="Localidad_key" />
+        </xs:unique>
+        <xs:unique name="dbo_Tiempo_dim_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_Tiempo_dim" />
+          <xs:field xpath="Tiempo_key" />
+        </xs:unique>
+        <xs:keyref name="Detalles_key" refer="dbo_Detalles_dim_Constraint1">
+          <xs:selector xpath=".//dbo_Crimenes_fact" />
+          <xs:field xpath="Detalles_key" />
+        </xs:keyref>
+        <xs:keyref name="Tiempo_key" refer="dbo_Tiempo_dim_Constraint1">
+          <xs:selector xpath=".//dbo_Crimenes_fact" />
+          <xs:field xpath="Tiempo_key" />
+        </xs:keyref>
+        <xs:keyref name="Clasificacion_key" refer="Constraint1">
+          <xs:selector xpath=".//dbo_Crimenes_fact" />
+          <xs:field xpath="Clasificacion_key" />
+        </xs:keyref>
+        <xs:keyref name="Localidad_key" refer="dbo_Localidad_dim_Constraint1">
+          <xs:selector xpath=".//dbo_Crimenes_fact" />
+          <xs:field xpath="Localidad_key" />
+        </xs:keyref>
+      </xs:element>
+    </xs:schema>
+    <Estad_x0020_Seguridad_x0020_HC_x0020_DM xmlns="" />
+  </Schema>
+</DataSourceView>

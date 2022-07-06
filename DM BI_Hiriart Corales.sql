@@ -32,18 +32,12 @@ MesAnio NVARCHAR(100) NOT NULL
 CREATE TABLE Detalles_dim(
 Detalles_key INT PRIMARY KEY IDENTITY(1, 1) NOT NULL,
 EdadVictima NVARCHAR(100) NOT NULL,
-GeneroPerpetuador NVARCHAR(100) NULL,
+SexoPerpetuador NVARCHAR(100) NULL,
 TipoArma NVARCHAR(100) NOT NULL,
 );
 
 CREATE TABLE Crimenes_fact(
 Afectados INT NOT NULL,
-Periodo DATETIME NOT NULL,
-RegionID INT NOT NULL,
-ClasificacionID INT NOT NULL,
-EdadVictima NVARCHAR(100) NOT NULL,
-GeneroPerpetuador NVARCHAR(100) NULL,
-TipoArma NVARCHAR(100) NOT NULL,
 Clasificacion_key INT NOT NULL,
 Localidad_key INT NOT NULL,
 Detalles_key INT NOT NULL,

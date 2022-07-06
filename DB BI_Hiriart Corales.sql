@@ -32,7 +32,7 @@ CONSTRAINT ClasificacionID FOREIGN KEY (ClasificacionID) REFERENCES Clasificacio
 CREATE TABLE DetalleCrimen(
 CrimenID INT PRIMARY KEY NOT NULL,
 EdadVictima NVARCHAR(100) NOT NULL,
-GeneroPerpetuador NVARCHAR(100) NULL,
+SexoPerpetuador NVARCHAR(100) NULL,
 TipoArma NVARCHAR(100) NOT NULL,
 CONSTRAINT CrimenID FOREIGN KEY (CrimenID) REFERENCES Crimen(CrimenID),
 );
